@@ -1,6 +1,5 @@
 # programs
 learn appliction programing
-
 1) Текстовый редактор +
 2) Связные списки +
 3) Подбор персонала 
