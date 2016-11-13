@@ -1,0 +1,811 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D94F8D5-3DD3-4EB2-A4F7-423187A1DCC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Textedit</RootNamespace>
+    <AssemblyName>Textedit</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActualSize.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddTable.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToFavorites.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alerts.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsBottom.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsCenteredHorizontalHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsCenteredVerticalHS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignObjectsTop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignTableCellMiddleCenter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignTableCellMiddleLeftJust.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignTableCellMiddleRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AlignToGrid.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Animate.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AppWindow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrangeSideBySide.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrangeWindows.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attachment.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundSound.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarCode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BehindText.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bold.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_active_directory.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_address.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_angle.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_hardcvr.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_report.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book_StackOfReports.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Breakpoint.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BringForward.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BringToFront.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar_schedule.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CanvasScale.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CascadeWindows.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CenterAcross.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkbox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckGrammar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckSpelling.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChooseColor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_eyedropper.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_fill.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_font.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color_linecolor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CompareVersions.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Conflict.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cut.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveFirst.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveLast.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MoveNext.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataContainer_MovePrevious.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteTable.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dial.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisplayInColor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleLeftArrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoubleRightArrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownloadDocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_Redo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_Undo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditBrightContrast.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditCode.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditInformation.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditTable.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Envelope.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eps_closed.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eps_open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eps_open_large.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpandSpace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expiration.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fax.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillDown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillLeft.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillRight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Filter2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find24_VS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindNext.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindNext_VS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FindPrevious_VS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_blue.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_green.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flag_red.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlipHorizontal.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlipVertical.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Font.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FontDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forecolor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormRun.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormulaEvaluator.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FullScreen.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Function.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GetLatestVersion.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoLtr.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoRtl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNext.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNextRecord.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToParentFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToPrevious.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToPreviousMessage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToPreviousRecord.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GotoShortcuts.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graph.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Highlight.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HtmlBalanceBraces.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLPage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLPassword.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HTMLSubmit.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagerScan.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportXML.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Indent.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IndentRTL.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertHyperlink.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertPage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertPhotos.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertPicture.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertTabControl.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Italic.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LineColor.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LinkLabel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_Bullets.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_Numbered.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_NumberedRTL.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_NumberedVertT.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_NumberedVertTB.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonthlyView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveToFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiplePages.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MultiSelect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavBack.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavForward.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewCard.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewDocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewMessage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewReport.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWebsite.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWindow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NextPage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFile.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openfolder_24.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenSelectedItem.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Organizer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrgChart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Outdent.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageNumber.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageWidth.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PauseRecorder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PieChart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PieChart3D.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pointer.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portrait.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PortraitToLandscapeView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PreviousPage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrimaryKey.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintPreview.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintPreviewDialog.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintSetup.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Properties.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProtectForm.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProtectSubdocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PublishPlan.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PublishToWeb.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pushpin.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadialChart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RecolorPicture.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Record.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_Cancel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshDocView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relationships.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rename.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Repeat.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Resize.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightArrow2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightsRestricted.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RightToLeftDoucment.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoutingSlip.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAll.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAsWebPage.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveFormDesign.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchInFolder.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchWeb.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Send.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SendBackward.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowAllComments.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowGridlines.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowGridlines2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowRulelines.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowRuler.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SortAscending_24.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SortDescending_24.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpeechMic.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitSubdocument.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SychronizeList.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Task.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Textbox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbnailLoading.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThumbnailView.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TurnAhead.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ViewThumbnails.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Web.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XMLFile.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
