@@ -16,7 +16,7 @@ namespace Personal
         {
             InitializeComponent();
         }
-
+        // Выбора записи
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
             button3.Enabled = true;
@@ -24,7 +24,7 @@ namespace Personal
             label2.Visible = false;
             textBox1.Visible = false;
         }
-
+        // Выбор действия
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
         {
             button2.Enabled = true;
@@ -32,7 +32,7 @@ namespace Personal
             label2.Visible = true;
             textBox1.Visible = true;
         }
-
+        // Добавить запись
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -60,7 +60,7 @@ namespace Personal
             item1.SubItems.Add("");
             listView1.Items.Add(item1);
         }
-
+        // Очистить поля
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
@@ -69,13 +69,13 @@ namespace Personal
             radioButton1.Checked = true;
             radioButton3.Checked = true;
         }
-
+        // Очистить таблицу
         private void button4_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             listView1.Items.Clear();
         }
-
+        // Выбрать подходящих
         private void button3_Click(object sender, EventArgs e)
         {
             for(int i = 0; i < listView1.Items.Count; i++)
