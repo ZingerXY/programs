@@ -1,9 +1,0 @@
-D:\System\Desktop\26_zachet\Zachet\Zachet\bin\Debug\Zachet.exe.config
-D:\System\Desktop\26_zachet\Zachet\Zachet\bin\Debug\Zachet.exe
-D:\System\Desktop\26_zachet\Zachet\Zachet\bin\Debug\Zachet.pdb
-D:\System\Desktop\26_zachet\Zachet\Zachet\obj\Debug\Zachet.csprojResolveAssemblyReference.cache
-D:\System\Desktop\26_zachet\Zachet\Zachet\obj\Debug\Zachet.Form1.resources
-D:\System\Desktop\26_zachet\Zachet\Zachet\obj\Debug\Zachet.Properties.Resources.resources
-D:\System\Desktop\26_zachet\Zachet\Zachet\obj\Debug\Zachet.csproj.GenerateResource.Cache
-D:\System\Desktop\26_zachet\Zachet\Zachet\obj\Debug\Zachet.exe
-D:\System\Desktop\26_zachet\Zachet\Zachet\obj\Debug\Zachet.pdb

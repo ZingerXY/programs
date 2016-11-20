@@ -72,12 +72,14 @@ namespace _14_ChatClient
             }
             catch (Exception ex)
             {
-                button2_Click(null, new EventArgs());
+                timer1.Stop();
+                client.Close();
                 return;
             }
             if (len == 0)
             {
-                button2_Click(null, new EventArgs());
+                timer1.Stop();
+                client.Close();
                 return;
             }
             string msg = Encoding.UTF8.GetString(data);
