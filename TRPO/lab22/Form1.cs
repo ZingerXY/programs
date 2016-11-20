@@ -93,9 +93,11 @@ namespace lab22
                 FROM Disc, performer
                 WHERE Disc.id =  AND performer.id = Disc.id_perf
              */
+            comboBox1.Items.Clear();
             for (int j = 0; j < dt.Rows.Count; j++)
             {
-                DataTable dtb = sql_query(c, "SELECT * FROM performer WHERE id=" + dt.Rows[1][j].ToString());
+                id = dt.Rows[1][j].ToString();
+                DataTable dtb = sql_query(c, "SELECT * FROM performer WHERE id=" + id);
                 string str = dtb.Rows[0][0].ToString();
                 comboBox1.Items.Add(str);
             }
