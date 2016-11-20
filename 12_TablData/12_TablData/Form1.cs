@@ -18,39 +18,8 @@ namespace _12_TablData
             InitializeComponent();
         }
 
-        class tovar
-        {
-            public string name { get; set; }
-            string category { get; set; }
-            int balance { get; set; }
-            int cost { get; set; }
-            int year { get; set; }
-
-            public tovar(string name, string category, int balance, int cost, int year)
-            {
-                this.name = name;
-                this.category = category;
-                this.balance = balance;
-                this.cost = cost;
-                this.year = year;
-            }
-
-            public tovar(string[] arr)
-            {
-                this.name = arr[0];
-                this.category = arr[1];
-                this.balance = int.Parse(arr[2]);
-                this.cost = int.Parse(arr[3]);
-                this.year = int.Parse(arr[4]);
-            }
-
-            public string getStr()
-            {
-                return name+"\t"+category+"\t"+balance+"\t"+cost+"\t"+year;
-            }
-        }
-
         List<tovar> list = new List<tovar>();
+        List<tovar> buy = new List<tovar>();
 
         void loadList(string file)
         {
@@ -64,38 +33,40 @@ namespace _12_TablData
             {
                 string str = read.ReadLine();
                 string[] arr = str.Split('\t');
-                ListViewItem item1 = new ListViewItem();
-                item1.Text = arr[0];
-                for(int j = 1; j < arr.Length; j++)
-                    item1.SubItems.Add(arr[j]);
-                listView1.Items.Add(item1);
-                tovar t = new tovar(arr[0], arr[1], int.Parse(arr[2]), int.Parse(arr[3]), int.Parse(arr[4]));
+                tovar t = new tovar(arr);
                 list.Add(t);
             }
 
+            updateListView(listView1, list);
             read.Close();
         }
 
-        void updateListView()
+        void updateListView(ListView listview, List<tovar> tov)
         {
-            listView1.Items.Clear();
-            for (int i = 0; i < list.Count; i++)
+            listview.Items.Clear();
+            for (int i = 0; i < tov.Count; i++)
             {
+                bool ch = true;
                 ListViewItem item1 = new ListViewItem();
-                item1.Text = list[i].name;
-                string[] arr = list[i].getStr().Split('\t');
+                item1.Text = tov[i].name;
+                string[] arr = tov[i].getStr().Split('\t');
+                for (int j = 0; j < comboBox1.Items.Count; j++)
+                    if(comboBox1.Items[j].ToString() == arr[1])
+                        ch = false;
+                if (ch)
+                    comboBox1.Items.Add(arr[1]);
                 for (int j = 1; j < arr.Length; j++)
                     item1.SubItems.Add(arr[j]);
-                listView1.Items.Add(item1);
+                listview.Items.Add(item1);
             }
         }
 
-        void saveList(string file)
+        void saveList(string file, List<tovar> tov)
         {
             StreamWriter write = new StreamWriter(file, false);
-            write.WriteLine(list.Count);
-            for(int i = 0; i < list.Count; i++)
-                write.WriteLine(list[i].getStr());
+            write.WriteLine(tov.Count);
+            for(int i = 0; i < tov.Count; i++)
+                write.WriteLine(tov[i].getStr());
             write.Close();
         }
 
@@ -120,7 +91,7 @@ namespace _12_TablData
         {
             SaveFileDialog f = new SaveFileDialog();
             if (f.ShowDialog() == DialogResult.OK)
-                saveList(f.FileName);
+                saveList(f.FileName, list);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,7 +104,115 @@ namespace _12_TablData
             }
                 
             list.Add(new tovar(arr));
-            updateListView();
+            updateListView(listView1, list);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex < 0) return;
+            List<tovar> l = new List<tovar>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].category != (string)comboBox1.SelectedItem) continue;
+                l.Add(list[i]);
+            }
+
+            Form2 f2 = new Form2((string)comboBox1.SelectedItem, l);
+            f2.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                list[i].recalculation();
+            }
+            updateListView(listView1, list);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(listView1.SelectedIndices.Count == 0)
+            {
+                MessageBox.Show("Ничего не выбрано");
+                return;
+            }
+            int count;
+            if(!int.TryParse(textBox6.Text,out count))
+            {
+                MessageBox.Show("Введите количество");
+                return;
+            }
+            if(count > list[listView1.SelectedIndices[0]].balance)
+            {
+                MessageBox.Show("Не достаточно товара на складе");
+                return;
+            }
+            tovar temp = list[listView1.SelectedIndices[0]];
+            int balance = list[listView1.SelectedIndices[0]].balance - count;
+            temp.balance = count;
+            buy.Add(new tovar(temp.getStr().Split('\t')));        
+            list[listView1.SelectedIndices[0]].balance = balance;
+            updateListView(listView2, buy);
+            updateListView(listView1, list);
+            int allcost = 0;
+            for (int i = 0; i < buy.Count; i++)
+                allcost += buy[i].getAllCost();
+            label9.Text = allcost.ToString();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog f = new SaveFileDialog();
+            if (f.ShowDialog() == DialogResult.OK)
+                saveList(f.FileName, buy);
+        }
+    }
+
+    public class tovar
+    {
+        public string name { get; set; }
+        public string category { get; set; }
+        public int balance { get; set; }
+        int cost { get; set; }
+        int year { get; set; }
+
+        public tovar(string name, string category, int balance, int cost, int year)
+        {
+            this.name = name;
+            this.category = category;
+            this.balance = balance;
+            this.cost = cost;
+            this.year = year;
+        }
+
+        public tovar(string[] arr)
+        {
+            this.name = arr[0];
+            this.category = arr[1];
+            this.balance = int.Parse(arr[2]);
+            this.cost = int.Parse(arr[3]);
+            this.year = int.Parse(arr[4]);
+        }
+
+        public int getAllCost()
+        {
+            return cost * balance;
+        }
+
+        public string getStr()
+        {
+            return name + "\t" + category + "\t" + balance + "\t" + cost + "\t" + year;
+        }
+
+        public void recalculation()
+        {
+            if(DateTime.Now.Year - year > 5)
+            {
+                year = DateTime.Now.Year;
+                cost = cost / 2;
+            }
         }
     }
 }
