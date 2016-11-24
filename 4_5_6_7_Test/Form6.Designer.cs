@@ -44,19 +44,19 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(10, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "Вопрос 1";
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(9, 44);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
+            this.radioButton1.Size = new System.Drawing.Size(64, 17);
             this.radioButton1.TabIndex = 1;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.Text = "Ответ 1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -64,10 +64,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(9, 67);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
+            this.radioButton2.Size = new System.Drawing.Size(64, 17);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.Text = "Ответ 2";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
@@ -75,10 +75,10 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(10, 90);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
+            this.radioButton3.Size = new System.Drawing.Size(64, 17);
             this.radioButton3.TabIndex = 3;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.Text = "Ответ 3";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton4
@@ -86,10 +86,10 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(9, 113);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 17);
+            this.radioButton4.Size = new System.Drawing.Size(64, 17);
             this.radioButton4.TabIndex = 4;
             this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
+            this.radioButton4.Text = "Ответ 4";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton5
@@ -97,10 +97,10 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(9, 136);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(85, 17);
+            this.radioButton5.Size = new System.Drawing.Size(64, 17);
             this.radioButton5.TabIndex = 5;
             this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "radioButton5";
+            this.radioButton5.Text = "Ответ 5";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -145,7 +145,7 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.Text = "Test: 1 / 5";
             this.ResumeLayout(false);
             this.PerformLayout();
 

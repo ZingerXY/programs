@@ -76,8 +76,7 @@ namespace _9_10_11_MediaPlayer
             player.playlistCollection.newPlaylist("myplaylist");
             IWMPMedia media = player.newMedia(f.FileName);
             //playlist.appendItem(media);
-
-            
+         
             //player.currentPlaylist = playlist;
             player.currentPlaylist.appendItem(media);
             updateList();

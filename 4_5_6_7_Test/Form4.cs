@@ -39,11 +39,11 @@ namespace MyTestProfi
                 list.Add(q);
                 listBox1.Items.Add(q.textQuestion);
             }
-
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            return;
             question n = (question) list[listBox1.SelectedIndex];
             question.Text = n.textQuestion;
 

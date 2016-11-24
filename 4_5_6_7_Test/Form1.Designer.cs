@@ -51,7 +51,7 @@
             // buttonEdit
             // 
             this.buttonEdit.Enabled = false;
-            this.buttonEdit.Location = new System.Drawing.Point(176, 73);
+            this.buttonEdit.Location = new System.Drawing.Point(120, 74);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit.TabIndex = 1;
@@ -62,7 +62,7 @@
             // buttonConfig
             // 
             this.buttonConfig.Enabled = false;
-            this.buttonConfig.Location = new System.Drawing.Point(176, 27);
+            this.buttonConfig.Location = new System.Drawing.Point(120, 28);
             this.buttonConfig.Name = "buttonConfig";
             this.buttonConfig.Size = new System.Drawing.Size(75, 23);
             this.buttonConfig.TabIndex = 2;
@@ -91,7 +91,7 @@
             // buttonStart
             // 
             this.buttonStart.Enabled = false;
-            this.buttonStart.Location = new System.Drawing.Point(176, 120);
+            this.buttonStart.Location = new System.Drawing.Point(120, 121);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(75, 23);
             this.buttonStart.TabIndex = 5;
@@ -103,15 +103,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(224, 181);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.labelPath);
             this.Controls.Add(this.buttonOpen);
             this.Controls.Add(this.buttonConfig);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonNew);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MyTestProfi";
             this.ResumeLayout(false);
             this.PerformLayout();
 

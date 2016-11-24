@@ -35,7 +35,6 @@ namespace Explorer
 
             label1.Text = path;
             megafunction();
-
         }
 
         void megafunction()
@@ -65,14 +64,10 @@ namespace Explorer
             }
 
             for (int i = 0; i < dirs.Length; i++)
-            {
                 listView1.Items.Add("> " + dirs[i].Name);
-                
-            }
+
             for (int i = 0; i < files.Length; i++)
-            {
                 listView1.Items.Add(files[i].Name);
-            }
         }
 
 
@@ -81,9 +76,7 @@ namespace Explorer
         {
             int x = path.LastIndexOf('\\');
             if (x == -1)
-            {
                 return;
-            }
             path = path.Remove(x);
 
             label1.Text = path;

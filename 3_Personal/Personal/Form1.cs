@@ -34,8 +34,7 @@ namespace Personal
         }
         // Добавить запись
         private void button2_Click(object sender, EventArgs e)
-        {
-            
+        {           
             ListViewItem item1 = new ListViewItem();
             item1.Text = textBox1.Text;
             item1.SubItems.Add(radioButton1.Checked ? radioButton1.Text : radioButton2.Text);

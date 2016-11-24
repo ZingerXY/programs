@@ -38,6 +38,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(260, 237);
@@ -60,8 +61,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.listView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Disk Info";
             this.Shown += new System.EventHandler(this.Form2_Shown);
             this.ResumeLayout(false);
 

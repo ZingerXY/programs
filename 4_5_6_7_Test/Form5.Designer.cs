@@ -120,7 +120,7 @@
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.start);
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.Text = "Start Test";
             this.ResumeLayout(false);
             this.PerformLayout();
 

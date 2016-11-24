@@ -103,8 +103,7 @@ namespace Zachet
         {
             n++;
             listView1.Columns.Add(textBox3.Text, 70, HorizontalAlignment.Left);
-            button3.Enabled = true;
-            
+            button3.Enabled = true;       
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -129,7 +128,6 @@ namespace Zachet
                 bReady.Enabled = true;
                 bNext.Enabled = false;
             }
-
         }
 
         private void bReady_Click(object sender, EventArgs e)
@@ -140,7 +138,6 @@ namespace Zachet
             stud.SubItems.Add(sum.ToString("0.0"));
             listView1.Items.Add((ListViewItem)stud.Clone());
             button3.Enabled = true;
-
         }
 
         //Добавляем студента
@@ -158,15 +155,14 @@ namespace Zachet
             c = 0;
             button3.Enabled = false;
         }
-
+        // Шрифт
         private void button4_Click(object sender, EventArgs e)
         {
             if (fontDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 for (int i = 0; i < listView1.Items.Count; i++)
                     listView1.Items[i].Font = fontDialog1.Font;
-
         }
-
+        // Цвет
         private void button5_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -182,10 +178,6 @@ namespace Zachet
                 listView1.GridLines = false;
         }
 
-
-
-
-
         //Число это цифры!
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -194,10 +186,5 @@ namespace Zachet
                 e.Handled = true;
             }
         }
-
     }
-
-
-
-
 }

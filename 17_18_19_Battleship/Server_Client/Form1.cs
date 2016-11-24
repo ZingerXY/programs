@@ -133,7 +133,7 @@ namespace Server_Client
         private void Start_Click(object sender, EventArgs e)
         {
             int port;
-            if (int.TryParse(textBox1.Text, out port) == false)
+            if (int.TryParse(textBox3.Text, out port) == false)
             {
                 MessageBox.Show("Порт должен быть числом.");
                 return;
@@ -143,9 +143,7 @@ namespace Server_Client
                 MessageBox.Show("Неверный порт.");
                 return;
             }
-
-            ThreadStart start = new ThreadStart(listener);
-            thread = new Thread(start);
+            thread = new Thread(listener);
             thread.Start();
         }
 
@@ -179,8 +177,7 @@ namespace Server_Client
                 {
                     break;
                 }
-                ParameterizedThreadStart start = new ParameterizedThreadStart(service);
-                Thread thread = new Thread(start);
+                Thread thread = new Thread(service);
                 thread.Start(link);
             }
         }

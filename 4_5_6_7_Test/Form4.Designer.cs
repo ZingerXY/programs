@@ -51,6 +51,12 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "Вопрос 1",
+            "Вопрос 2",
+            "Вопрос 3",
+            "Вопрос 4",
+            "Вопрос 5"});
             this.listBox1.Location = new System.Drawing.Point(13, 13);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(183, 212);
@@ -232,8 +238,9 @@
             this.Controls.Add(this.buttonMinus);
             this.Controls.Add(this.buttonPlus);
             this.Controls.Add(this.listBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Create";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

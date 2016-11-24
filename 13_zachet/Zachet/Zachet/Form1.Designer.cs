@@ -55,16 +55,16 @@
             this.listView1.ForeColor = System.Drawing.Color.DarkRed;
             this.listView1.GridLines = true;
             this.listView1.HoverSelection = true;
-            this.listView1.Location = new System.Drawing.Point(12, 115);
+            this.listView1.Location = new System.Drawing.Point(12, 68);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(810, 520);
+            this.listView1.Size = new System.Drawing.Size(654, 262);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(696, 12);
+            this.button1.Location = new System.Drawing.Point(422, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 23);
             this.button1.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(766, 41);
+            this.textBox1.Location = new System.Drawing.Point(415, 336);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(56, 20);
             this.textBox1.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(766, 67);
+            this.textBox2.Location = new System.Drawing.Point(559, 336);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(56, 20);
             this.textBox2.TabIndex = 5;
@@ -93,7 +93,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(693, 44);
+            this.label1.Location = new System.Drawing.Point(342, 339);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 6;
@@ -103,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(693, 70);
+            this.label2.Location = new System.Drawing.Point(486, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 7;
@@ -118,7 +118,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(118, 9);
+            this.button2.Location = new System.Drawing.Point(118, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 23);
             this.button2.TabIndex = 9;
@@ -128,7 +128,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 44);
+            this.textBox4.Location = new System.Drawing.Point(249, 10);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 10;
@@ -136,7 +136,7 @@
             // button3
             // 
             this.button3.Enabled = false;
-            this.button3.Location = new System.Drawing.Point(118, 44);
+            this.button3.Location = new System.Drawing.Point(355, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 23);
             this.button3.TabIndex = 11;
@@ -147,7 +147,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 84);
+            this.label3.Location = new System.Drawing.Point(13, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 12;
@@ -155,7 +155,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(118, 81);
+            this.textBox5.Location = new System.Drawing.Point(119, 40);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(24, 20);
             this.textBox5.TabIndex = 13;
@@ -165,9 +165,9 @@
             // bNext
             // 
             this.bNext.Enabled = false;
-            this.bNext.Location = new System.Drawing.Point(157, 79);
+            this.bNext.Location = new System.Drawing.Point(162, 38);
             this.bNext.Name = "bNext";
-            this.bNext.Size = new System.Drawing.Size(55, 23);
+            this.bNext.Size = new System.Drawing.Size(99, 23);
             this.bNext.TabIndex = 14;
             this.bNext.Text = "Далее";
             this.bNext.UseVisualStyleBackColor = true;
@@ -176,9 +176,9 @@
             // bReady
             // 
             this.bReady.Enabled = false;
-            this.bReady.Location = new System.Drawing.Point(218, 79);
+            this.bReady.Location = new System.Drawing.Point(267, 38);
             this.bReady.Name = "bReady";
-            this.bReady.Size = new System.Drawing.Size(55, 23);
+            this.bReady.Size = new System.Drawing.Size(99, 23);
             this.bReady.TabIndex = 15;
             this.bReady.Text = "Готово";
             this.bReady.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(362, 79);
+            this.checkBox1.Location = new System.Drawing.Point(230, 340);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(56, 17);
             this.checkBox1.TabIndex = 17;
@@ -199,7 +199,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(362, 50);
+            this.button4.Location = new System.Drawing.Point(118, 336);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(95, 23);
             this.button4.TabIndex = 18;
@@ -210,7 +210,7 @@
             // button5
             // 
             this.button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(362, 21);
+            this.button5.Location = new System.Drawing.Point(12, 336);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(95, 23);
             this.button5.TabIndex = 19;
@@ -222,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 647);
+            this.ClientSize = new System.Drawing.Size(680, 402);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.checkBox1);
@@ -240,8 +240,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Зачетная ведомость";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

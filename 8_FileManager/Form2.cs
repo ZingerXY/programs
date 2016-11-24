@@ -43,39 +43,27 @@ namespace Explorer
                 string[] units = new string[] { " KB", " MB", " GB", " TB" };
 
                 for (int i = 0; i < units.Length; i++)
-                {
                     if (size > 1024)
                     {
                         size /= 1024;
                         unit = units[i];
                     }
-                }
-
                 ListViewItem item4 = new ListViewItem();
                 item4.Text = "Size";
                 item4.SubItems.Add(size.ToString("0.00") + unit);
                 listView1.Items.Add(item4);
             }
-
             ListViewItem item3 = new ListViewItem();
             item3.Text = "type";
             string type = "unknown";
             if (drive.DriveType == DriveType.Removable)
-            {
                 type = "Removable";
-            }
             if (drive.DriveType == DriveType.Fixed)
-            {
                 type = "Fixed";
-            }
             if (drive.DriveType == DriveType.CDRom)
-            {
                 type = "CDRom";
-            }
             item3.SubItems.Add(type);
             listView1.Items.Add(item3);
-
-
         }
     }
 }

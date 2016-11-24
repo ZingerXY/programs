@@ -106,8 +106,7 @@ namespace LinkLists
                 link[comboBox1.SelectedIndex].Add(textBox1.Text);
                 textBox1.Text = "";
                 nsave = true;
-            }
-                
+            }                
         }
         // Удалить группу
         private void button3_Click(object sender, EventArgs e)
@@ -118,8 +117,7 @@ namespace LinkLists
                 comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);             
                 listBox1.Items.Clear();
                 nsave = true;
-            }
-                
+            }          
         }
         // Добавить группу
         private void button5_Click(object sender, EventArgs e)
@@ -131,8 +129,7 @@ namespace LinkLists
                 list.Add(textBox2.Text);
                 textBox2.Text = "";
                 nsave = true;
-            }
-                
+            }              
         }
         // Сортировка
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
