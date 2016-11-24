@@ -66,6 +66,7 @@ namespace _14_ChatClient
         {
             byte[] data = new byte[100];
             int len;
+            client.ReceiveTimeout = 5;
             try
             {
                 len = client.Receive(data);

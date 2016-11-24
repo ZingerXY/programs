@@ -61,10 +61,8 @@ namespace ServerData
                 if (i.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                     return i.ToString();
             }
-
             return "127.0.0.1";
         }
-
     }
 
     public enum PacketType

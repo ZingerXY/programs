@@ -29,10 +29,6 @@ namespace ChatServer
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
         // Запуск сервера
         private void button1_Click(object sender, EventArgs e)
         {
@@ -49,14 +45,9 @@ namespace ChatServer
             listenThread.Start();
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
         static void ListenThread()
         {
-            while (true) //continuously accept client requests
+            while (true)
             {
                 listenerSocket.Listen(0);
                 _clients.Add(new ClientData(listenerSocket.Accept()));
