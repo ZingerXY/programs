@@ -26,6 +26,7 @@ namespace lab22
             DataTable dt = sql_query(c, "SELECT * FROM audio");
             dataGridView1.DataSource = dt;
             dataGridView1.Columns[0].Visible = false;
+
             for (int i = 1; i < 5; i++)
             {
                 dataGridView1.Columns[i].HeaderText = Controls["label" + i].Text;
@@ -127,8 +128,14 @@ namespace lab22
                 comboBox1.Items.Add(str);
             }
             //Text = dt.Rows[0][0].ToString();
+            dataGridView2.DataSource = dt;
+            dataGridView2.Columns[1].HeaderText = "Имя";
+            dataGridView2.Columns[2].HeaderText = "Стиль";
+            dataGridView2.Columns[3].HeaderText = "Страна";
+            dataGridView2.Columns[0].Visible = false;
+
         }
-                
+
         private void textBox0_TextChanged(object sender, EventArgs e)
         {
             /**/
@@ -166,19 +173,39 @@ namespace lab22
             TextBox tx = (TextBox)sender;
            string str = Fresh().Columns[(int)tx.Tag].ToString();
             if ((int)tx.Tag == 1)
-       //     Fresh("Select * from audio where lower(" + str + ") like lower('%" + tx.Text + "%')");
-            Fresh("Select * from audio where lcase(" + str + ") like lcase('%" + tx.Text + "%')");
-            
-            //  Fresh("Select * from audio where lower("+ str +") like lower('%"+tx.Text + "%')");
+            Fresh("Select * from audio where lcase(" + str + ") like lcase('%" + tx.Text + "%')");     
             else
               Fresh("Select * from audio where " + str + " = " + tx.Text);
             Text = tx.Text;
-
         }
 
         private void save_Click(object sender, EventArgs e)
         {
             Fresh();
+        }
+
+        private void comboBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                ComboBox tx = (ComboBox)sender;
+                Fresh("Select t1.* from audio t1, disc, performer t3 where t1.id = disc.id and disc.id_perf = t3.id and lcase(t3." + tx.Tag + ") like lcase('%" + tx.Text + "%')");
+            }
+            catch (Exception fe) {
+                TextBox tx = (TextBox)sender;
+                Fresh("Select t1.* from audio t1, disc, performer t3 where t1.id = disc.id and disc.id_perf = t3.id and lcase(t3." + tx.Tag + ") like lcase('%" + tx.Text + "%')");
+            }
+        }
+
+        private void save_MouseHover(object sender, EventArgs e)
+        {
+            save.Text = "Отобразить все";
+        }
+
+        private void save_MouseLeave(object sender, EventArgs e)
+        {
+            save.Text = "Сброс фильтра";
+
         }
     }
 

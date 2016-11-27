@@ -53,8 +53,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.bNewPerf = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -79,8 +81,10 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 50;
+            this.comboBox1.Tag = "perf_name";
             this.comboBox1.ValueMember = "performer_name";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
             // 
             // label5
             // 
@@ -129,10 +133,12 @@
             this.save.Text = "Сброс фильтра";
             this.save.UseVisualStyleBackColor = true;
             this.save.Click += new System.EventHandler(this.save_Click);
+            this.save.MouseLeave += new System.EventHandler(this.save_MouseLeave);
+            this.save.MouseHover += new System.EventHandler(this.save_MouseHover);
             // 
             // change
             // 
-            this.change.Location = new System.Drawing.Point(436, 383);
+            this.change.Location = new System.Drawing.Point(744, 380);
             this.change.Name = "change";
             this.change.Size = new System.Drawing.Size(165, 23);
             this.change.TabIndex = 44;
@@ -142,7 +148,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(436, 223);
+            this.pictureBox1.Location = new System.Drawing.Point(744, 220);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(165, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,6 +238,8 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(121, 20);
             this.textBox5.TabIndex = 52;
+            this.textBox5.Tag = "style";
+            this.textBox5.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
             // 
             // textBox6
             // 
@@ -239,6 +247,8 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(121, 20);
             this.textBox6.TabIndex = 53;
+            this.textBox6.Tag = "country";
+            this.textBox6.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox1_KeyUp);
             // 
             // label6
             // 
@@ -272,11 +282,25 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(607, 12);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(302, 192);
+            this.dataGridView2.TabIndex = 57;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 430);
+            this.ClientSize = new System.Drawing.Size(921, 430);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bNewPerf);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -306,6 +330,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,6 +362,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bNewPerf;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
