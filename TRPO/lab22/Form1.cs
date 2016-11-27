@@ -160,7 +160,11 @@ namespace lab22
         private void textBox1_TextChanged(object sender, KeyEventArgs e)
         {
             TextBox tx = (TextBox)sender;
-            
+           string str = Fresh().Columns[(int)tx.Tag].ToString();
+            Text = "Select * from audio where lower(" + str + ") like lower('%" + tx.Text + "%')";
+            //  Fresh("Select * from audio where lower("+ str +") like lower('%"+tx.Text + "%')");
+              Fresh("Select * from audio where "+ str +" =tx.Text");
+
         }
     }
 }
