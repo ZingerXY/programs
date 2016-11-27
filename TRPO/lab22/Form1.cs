@@ -168,12 +168,17 @@ namespace lab22
             if ((int)tx.Tag == 1)
        //     Fresh("Select * from audio where lower(" + str + ") like lower('%" + tx.Text + "%')");
             Fresh("Select * from audio where lcase(" + str + ") like lcase('%" + tx.Text + "%')");
-
+            
             //  Fresh("Select * from audio where lower("+ str +") like lower('%"+tx.Text + "%')");
             else
               Fresh("Select * from audio where " + str + " = " + tx.Text);
             Text = tx.Text;
 
+        }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+            Fresh();
         }
     }
 

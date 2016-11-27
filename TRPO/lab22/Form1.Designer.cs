@@ -122,12 +122,13 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(39, 380);
+            this.save.Location = new System.Drawing.Point(2, 380);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(75, 23);
+            this.save.Size = new System.Drawing.Size(112, 23);
             this.save.TabIndex = 45;
-            this.save.Text = "Сохранить";
+            this.save.Text = "Сброс фильтра";
             this.save.UseVisualStyleBackColor = true;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // change
             // 
