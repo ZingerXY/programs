@@ -43,7 +43,7 @@ namespace lab22
             toolTip1.SetToolTip(bNewPerf, "Создавайте авторов с умом");
             toolTip1.SetToolTip(change, "Дорога ложка к обеду");
 
-        }
+        }      
         DataTable Fresh(string str = "SELECT * FROM audio")
         {
             DataTable dt = sql_query(c, str);
@@ -71,7 +71,11 @@ namespace lab22
             mc.Connection = c;
             mc.CommandText = query;
             da.SelectCommand = mc;
-            da.Fill(dt);
+			try
+			{
+				da.Fill(dt);
+			}
+            catch(Exception e) { MessageBox.Show(e.Message); }
             c.Close();
             return dt;
         }
@@ -163,7 +167,7 @@ namespace lab22
            string str = Fresh().Columns[(int)tx.Tag].ToString();
             if ((int)tx.Tag == 1)
        //     Fresh("Select * from audio where lower(" + str + ") like lower('%" + tx.Text + "%')");
-            Fresh("Select * from audio where " + str + " like '%" + tx.Text + "%'");
+            Fresh("Select * from audio where lcase(" + str + ") like lcase('%" + tx.Text + "%')");
 
             //  Fresh("Select * from audio where lower("+ str +") like lower('%"+tx.Text + "%')");
             else
