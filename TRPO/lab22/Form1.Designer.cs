@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.bNewPerf = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -187,6 +190,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 38;
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_TextChanged);
             // 
             // textBox3
             // 
@@ -194,6 +198,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 37;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -201,6 +206,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 36;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_TextChanged);
             // 
             // textBox1
             // 
@@ -208,6 +214,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 35;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -250,11 +257,26 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "Страна:";
             // 
+            // bNewPerf
+            // 
+            this.bNewPerf.Location = new System.Drawing.Point(299, 312);
+            this.bNewPerf.Name = "bNewPerf";
+            this.bNewPerf.Size = new System.Drawing.Size(121, 23);
+            this.bNewPerf.TabIndex = 56;
+            this.bNewPerf.Text = "Добавить автора";
+            this.bNewPerf.UseVisualStyleBackColor = true;
+            this.bNewPerf.Click += new System.EventHandler(this.bNewPerf_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 430);
+            this.Controls.Add(this.bNewPerf);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox6);
@@ -312,6 +334,8 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bNewPerf;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
