@@ -96,9 +96,9 @@ namespace lab22
             comboBox1.Items.Clear();
             for (int j = 0; j < dt.Rows.Count; j++)
             {
-                id = dt.Rows[1][j].ToString();
+                id = dt.Rows[j][1].ToString();
                 DataTable dtb = sql_query(c, "SELECT * FROM performer WHERE id=" + id);
-                string str = dtb.Rows[0][0].ToString();
+                string str = dtb.Rows[0][1].ToString();
                 comboBox1.Items.Add(str);
             }
             //Text = dt.Rows[0][0].ToString();
