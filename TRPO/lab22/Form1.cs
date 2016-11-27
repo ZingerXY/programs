@@ -111,5 +111,14 @@ namespace lab22
         {
             /**/
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dts = sql_query(c, "SELECT country, style FROM performer WHERE perf_name='" + comboBox1.SelectedItem.ToString() + "'");
+            textBox5.Text = dts.Rows[0][1].ToString();
+            textBox6.Text = dts.Rows[0][0].ToString();
+
+
+        }
     }
 }
