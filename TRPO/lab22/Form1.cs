@@ -161,10 +161,19 @@ namespace lab22
         {
             TextBox tx = (TextBox)sender;
            string str = Fresh().Columns[(int)tx.Tag].ToString();
-            Text = "Select * from audio where lower(" + str + ") like lower('%" + tx.Text + "%')";
+            if ((int)tx.Tag == 1)
+       //     Fresh("Select * from audio where lower(" + str + ") like lower('%" + tx.Text + "%')");
+            Fresh("Select * from audio where " + str + " like '%" + tx.Text + "%'");
+
             //  Fresh("Select * from audio where lower("+ str +") like lower('%"+tx.Text + "%')");
-              Fresh("Select * from audio where "+ str +" =tx.Text");
+            else
+              Fresh("Select * from audio where " + str + " = " + tx.Text);
+            Text = tx.Text;
 
         }
     }
+
+
+
 }
+
