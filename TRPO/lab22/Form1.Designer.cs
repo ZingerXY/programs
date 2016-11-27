@@ -54,9 +54,14 @@
             this.bNewPerf = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.lab22DataSet = new lab22.lab22DataSet();
+            this.audioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.audioTableAdapter = new lab22.lab22DataSetTableAdapters.audioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lab22DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -295,6 +300,20 @@
             this.dataGridView2.Size = new System.Drawing.Size(302, 192);
             this.dataGridView2.TabIndex = 57;
             // 
+            // lab22DataSet
+            // 
+            this.lab22DataSet.DataSetName = "lab22DataSet";
+            this.lab22DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // audioBindingSource
+            // 
+            this.audioBindingSource.DataMember = "audio";
+            this.audioBindingSource.DataSource = this.lab22DataSet;
+            // 
+            // audioTableAdapter
+            // 
+            this.audioTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +350,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lab22DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,6 +384,9 @@
         private System.Windows.Forms.Button bNewPerf;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource audioBindingSource;
+        private lab22DataSet lab22DataSet;
+        private lab22DataSetTableAdapters.audioTableAdapter audioTableAdapter;
     }
 }
 

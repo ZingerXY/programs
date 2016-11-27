@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +45,10 @@ namespace lab22
             toolTip1.SetToolTip(bNewPerf, "Создавайте авторов с умом");
             toolTip1.SetToolTip(change, "Дорога ложка к обеду");
 
-        }      
+
+
+            this.reportViewer1.RefreshReport();
+        }
         DataTable Fresh(string str = "SELECT * FROM audio")
         {
             DataTable dt = sql_query(c, str);
@@ -182,6 +186,7 @@ namespace lab22
         private void save_Click(object sender, EventArgs e)
         {
             Fresh();
+
         }
 
         private void comboBox1_KeyUp(object sender, KeyEventArgs e)
