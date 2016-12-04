@@ -47,7 +47,7 @@ namespace lab22
 
 
 
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
         DataTable Fresh(string str = "SELECT * FROM audio")
         {
