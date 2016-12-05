@@ -26,10 +26,10 @@ namespace AIS_musicCD
 			audio.Show();
 		}
 
-		private void Autors_Click(object sender, EventArgs e)
+		private void Authors_Click(object sender, EventArgs e)
 		{
-			Autors autors = new Autors(DBC);
-			autors.Show();
+			Authors authors = new Authors(DBC);
+			authors.Show();
 		}
 
 		private void Style_Click(object sender, EventArgs e)
@@ -49,5 +49,7 @@ namespace AIS_musicCD
 			Report report = new Report(DBC);
 			report.Show();
 		}
+
+		
 	}
 }

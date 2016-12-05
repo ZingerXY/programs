@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace AIS_musicCD
 {
-	public partial class Autors : Form
+	public partial class Authors : Form
 	{
 		OleDbConnection DBC;
 
-		public Autors(OleDbConnection DBC)
+		public Authors(OleDbConnection DBC)
 		{
 			this.DBC = DBC;
 			InitializeComponent();

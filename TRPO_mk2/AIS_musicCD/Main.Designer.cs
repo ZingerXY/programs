@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.Audio = new System.Windows.Forms.Button();
-			this.Autors = new System.Windows.Forms.Button();
+			this.Authors = new System.Windows.Forms.Button();
 			this.Style = new System.Windows.Forms.Button();
 			this.Country = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -48,16 +48,16 @@
 			this.Audio.UseVisualStyleBackColor = true;
 			this.Audio.Click += new System.EventHandler(this.Audio_Click);
 			// 
-			// Autors
+			// Authors
 			// 
-			this.Autors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Autors.Location = new System.Drawing.Point(173, 56);
-			this.Autors.Name = "Autors";
-			this.Autors.Size = new System.Drawing.Size(128, 35);
-			this.Autors.TabIndex = 1;
-			this.Autors.Text = "Исполнители";
-			this.Autors.UseVisualStyleBackColor = true;
-			this.Autors.Click += new System.EventHandler(this.Autors_Click);
+			this.Authors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.Authors.Location = new System.Drawing.Point(173, 56);
+			this.Authors.Name = "Authors";
+			this.Authors.Size = new System.Drawing.Size(128, 35);
+			this.Authors.TabIndex = 1;
+			this.Authors.Text = "Исполнители";
+			this.Authors.UseVisualStyleBackColor = true;
+			this.Authors.Click += new System.EventHandler(this.Authors_Click);
 			// 
 			// Style
 			// 
@@ -122,7 +122,7 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.Country);
 			this.Controls.Add(this.Style);
-			this.Controls.Add(this.Autors);
+			this.Controls.Add(this.Authors);
 			this.Controls.Add(this.Audio);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Main";
@@ -135,7 +135,7 @@
 		#endregion
 
 		private System.Windows.Forms.Button Audio;
-		private System.Windows.Forms.Button Autors;
+		private System.Windows.Forms.Button Authors;
 		private System.Windows.Forms.Button Style;
 		private System.Windows.Forms.Button Country;
 		private System.Windows.Forms.Label label1;
