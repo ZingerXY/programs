@@ -50,6 +50,13 @@ namespace AIS_musicCD
 			report.Show();
 		}
 
-		
+		private void AddRecord_Click(object sender, EventArgs e)
+		{
+			string[]  str = new string[2];
+			str = "style_name Стиль".Split(' ');
+			Insert ins = new Insert("style", str);
+			Add add = new Add(DBC, ins);
+			add.Show();
+		}
 	}
 }

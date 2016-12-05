@@ -58,11 +58,11 @@
     <Compile Include="Audio.Designer.cs">
       <DependentUpon>Audio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Autors.cs">
+    <Compile Include="Authors.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Autors.Designer.cs">
-      <DependentUpon>Autors.cs</DependentUpon>
+    <Compile Include="Authors.Designer.cs">
+      <DependentUpon>Authors.cs</DependentUpon>
     </Compile>
     <Compile Include="Country.cs">
       <SubType>Form</SubType>
@@ -70,6 +70,7 @@
     <Compile Include="Country.Designer.cs">
       <DependentUpon>Country.cs</DependentUpon>
     </Compile>
+    <Compile Include="Insert.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Audio.resx">
       <DependentUpon>Audio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authors.resx">
+      <DependentUpon>Authors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Country.resx">
       <DependentUpon>Country.cs</DependentUpon>

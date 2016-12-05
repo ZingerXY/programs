@@ -88,6 +88,7 @@
 			this.Controls.Add(this.dataGridView1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Style";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Style";
 			this.Load += new System.EventHandler(this.Style_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -1,6 +1,6 @@
 ﻿namespace AIS_musicCD
 {
-	partial class Autors
+	partial class Authors
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,11 +28,53 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.Add = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.AllowUserToAddRows = false;
+			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+			this.dataGridView1.MultiSelect = false;
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.ReadOnly = true;
+			this.dataGridView1.RowHeadersVisible = false;
+			this.dataGridView1.Size = new System.Drawing.Size(473, 192);
+			this.dataGridView1.TabIndex = 37;
+			// 
+			// Add
+			// 
+			this.Add.Location = new System.Drawing.Point(13, 238);
+			this.Add.Name = "Add";
+			this.Add.Size = new System.Drawing.Size(75, 23);
+			this.Add.TabIndex = 38;
+			this.Add.Text = "Добавить";
+			this.Add.UseVisualStyleBackColor = true;
+			this.Add.Click += new System.EventHandler(this.Add_Click);
+			// 
+			// Authors
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(506, 419);
+			this.Controls.Add(this.Add);
+			this.Controls.Add(this.dataGridView1);
+			this.Name = "Authors";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Autors";
+			this.Load += new System.EventHandler(this.Authors_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion
+
+		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.Button Add;
 	}
 }

@@ -36,8 +36,10 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 262);
 			this.Name = "Add";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Add";
 			this.Load += new System.EventHandler(this.Add_Load);
+			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Add_MouseMove);
 			this.ResumeLayout(false);
 
 		}

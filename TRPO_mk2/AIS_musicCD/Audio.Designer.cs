@@ -168,6 +168,7 @@
 			this.Controls.Add(this.dataGridView1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Audio";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Audio";
 			this.Load += new System.EventHandler(this.Audio_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

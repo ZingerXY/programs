@@ -35,6 +35,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.Report = new System.Windows.Forms.Button();
+			this.AddRecord = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// Audio
@@ -94,6 +95,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.SystemColors.Control;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label2.Location = new System.Drawing.Point(104, 24);
 			this.label2.Name = "label2";
@@ -104,7 +106,7 @@
 			// Report
 			// 
 			this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Report.Location = new System.Drawing.Point(101, 220);
+			this.Report.Location = new System.Drawing.Point(173, 225);
 			this.Report.Name = "Report";
 			this.Report.Size = new System.Drawing.Size(128, 35);
 			this.Report.TabIndex = 6;
@@ -112,11 +114,23 @@
 			this.Report.UseVisualStyleBackColor = true;
 			this.Report.Click += new System.EventHandler(this.Report_Click);
 			// 
+			// AddRecord
+			// 
+			this.AddRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.AddRecord.Location = new System.Drawing.Point(27, 225);
+			this.AddRecord.Name = "AddRecord";
+			this.AddRecord.Size = new System.Drawing.Size(128, 35);
+			this.AddRecord.TabIndex = 7;
+			this.AddRecord.Text = "Добавить";
+			this.AddRecord.UseVisualStyleBackColor = true;
+			this.AddRecord.Click += new System.EventHandler(this.AddRecord_Click);
+			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(328, 292);
+			this.Controls.Add(this.AddRecord);
 			this.Controls.Add(this.Report);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -126,6 +140,7 @@
 			this.Controls.Add(this.Audio);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Main";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "АИС - учет музыкальных дисков";
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -141,6 +156,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button Report;
+		private System.Windows.Forms.Button AddRecord;
 	}
 }
 

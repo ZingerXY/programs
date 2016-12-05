@@ -34,8 +34,9 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(481, 443);
+			this.ClientSize = new System.Drawing.Size(486, 349);
 			this.Name = "Report";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Report";
 			this.ResumeLayout(false);
 
