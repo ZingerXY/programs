@@ -113,22 +113,22 @@ namespace AIS_musicCD
             if (isMouseDown)
             {
                 Point mousePos = Control.MousePosition;
-                mousePos.Offset(mouseOffset.X, mouseOffset.Y);
+                mousePos.Offset(mouseOffset.X + 4, mouseOffset.Y + 26);
                 Location = mousePos;
             }
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
-            // Changes the isMouseDown field so that the form does
-            // not move unless the user is pressing the left mouse button.
             if (e.Button == MouseButtons.Left)
             {
                 isMouseDown = false;
             }
         }
 
-
-
-    }
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+	}
 }
