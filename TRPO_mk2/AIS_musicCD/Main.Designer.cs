@@ -146,7 +146,7 @@
             this.Text = "АИС - учет музыкальных дисков";
             this.TransparencyKey = System.Drawing.Color.Lime;
             this.Load += new System.EventHandler(this.Main_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
+      //      this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
