@@ -25,7 +25,7 @@ namespace AIS_musicCD
 		{
 
             DataTable dt2 = SQL.query(DBC,
-"SELECT authors.code, authors.group_name AS Группа, style.style_name AS Стиль, country.country_name AS Страна FROM style INNER JOIN(country INNER JOIN authors ON country.[code] = authors.[country]) ON style.[code] = authors.[style];");
+"SELECT authors.code + 1024, authors.group_name AS Группа, style.style_name AS Стиль, country.country_name AS Страна FROM style INNER JOIN(country INNER JOIN authors ON country.[code] = authors.[country]) ON style.[code] = authors.[style];");
             dataGridView1.DataSource = dt2;
         }
 		private void Add_Click(object sender, EventArgs e)
