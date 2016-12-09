@@ -35,10 +35,28 @@ namespace AIS_musicCD
 				myLabel.Text = apr.pr[i][1];
 				//myLabel.BackColor = Color.Red;
 				this.Controls.Add(myLabel);
-				TextBox myText = new TextBox();
-				myText.Location = new Point( 110, i * 25 + st);
-				apr.SetTextBox(i,myText);
-                this.Controls.Add(myText);
+
+				if(apr.pr[i].Length > 2)
+				{
+					ComboBox myCbox = new ComboBox();
+					myCbox.Location = new Point(110, i * 25 + st);
+					DataTable dt = SQL.query(DBC, "SELECT * FROM " + apr.pr[i][2]);
+					for (int j = 0; j < dt.Rows.Count; j++)
+					{
+						//int n = int.Parse(dt.Rows[j][0].ToString());
+                        myCbox.Items.Add(dt.Rows[j][1].ToString());
+					}					
+					apr.SetTextBox(i, myCbox);
+					this.Controls.Add(myCbox);
+				}
+				else
+				{
+					TextBox myText = new TextBox();
+					myText.Location = new Point(110, i * 25 + st);
+					apr.SetTextBox(i, myText);
+					this.Controls.Add(myText);
+				}
+				
 			}
 
 			Button myButt = new Button();
@@ -52,7 +70,11 @@ namespace AIS_musicCD
 
 		private void MyButt_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show(apr.GetInsert());
+			/*MessageBox.Show(apr.GetInsert());
+			return;*/
+			if (SQL.query(DBC, apr.GetInsert(), "add") > 0)
+				MessageBox.Show("Запись успешно добавлена.");
+			Close();
 			//throw new NotImplementedException();
 		}
 

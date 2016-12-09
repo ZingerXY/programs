@@ -25,7 +25,7 @@ namespace AIS_musicCD
 		{
 			dataGridView1.DataSource = SQL.query(DBC,
 				"SELECT style.code AS Код, authors.group_name AS Группа, style.style_name AS Стиль, country.country_name AS Страна " +
-				" FROM style INNER JOIN (country INNER JOIN authors ON country.[code] = authors.[coutry]) ON style.[code] = authors.[style];");
+				" FROM style INNER JOIN (country INNER JOIN authors ON country.[code] = authors.[country]) ON style.[code] = authors.[style];");
 		}
 
 		private void Add_Click(object sender, EventArgs e)

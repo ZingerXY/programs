@@ -52,11 +52,20 @@ namespace AIS_musicCD
 
 		private void AddRecord_Click(object sender, EventArgs e)
 		{
-			string[]  str = new string[2];
+			// Создание формы на добавление с множеством полей
+			List<string[]> ls = new List<string[]>();
+			ls.Add("group_name,Название группы".Split(','));
+			ls.Add("style,Стиль,style".Split(','));
+			ls.Add("country,Страна,country".Split(','));
+			Insert ins = new Insert("authors", ls);
+			Add add = new Add(DBC, ins);
+			add.Show();
+			// Создание формы на добавление с 1 полем
+			/*string[]  str = new string[2];
 			str = "style_name Стиль".Split(' ');
 			Insert ins = new Insert("style", str);
 			Add add = new Add(DBC, ins);
-			add.Show();
+			add.Show();*/
 		}
 	}
 }
