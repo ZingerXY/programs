@@ -14,8 +14,10 @@ namespace AIS_musicCD
 	public partial class Main : Form
 	{
 		OleDbConnection DBC = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=AIS.mdb");
+        private Point mouseOffset;
+        private bool isMouseDown = false;
 
-		public Main()
+        public Main()
 		{
 			InitializeComponent();
 		}
@@ -67,5 +69,66 @@ namespace AIS_musicCD
 			Add add = new Add(DBC, ins);
 			add.Show();*/
 		}
-	}
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Timer timer = new Timer();
+            timer.Start();
+            timer.Interval = 1000;
+            timer.Tick += tikaet;
+            label2.Text = "Сегодня: " + DateTime.Now.ToString();
+            label2.BackColor = Color.FromArgb(120, 150, 150, 150);
+
+        }
+
+        private void tikaet(object sender, EventArgs e)
+        {
+         //   throw new NotImplementedException();
+            label2.Text = "Сегодня: " + DateTime.Now.ToString();
+
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape) this.Close();
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            int xOffset;
+            int yOffset;
+
+            if (e.Button == MouseButtons.Left)
+            {
+                xOffset = -e.X - SystemInformation.FrameBorderSize.Width;
+                yOffset = -e.Y - SystemInformation.CaptionHeight -
+                    SystemInformation.FrameBorderSize.Height;
+                mouseOffset = new Point(xOffset, yOffset);
+                isMouseDown = true;
+            }
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                Point mousePos = Control.MousePosition;
+                mousePos.Offset(mouseOffset.X, mouseOffset.Y);
+                Location = mousePos;
+            }
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            // Changes the isMouseDown field so that the form does
+            // not move unless the user is pressing the left mouse button.
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = false;
+            }
+        }
+
+
+
+    }
 }
