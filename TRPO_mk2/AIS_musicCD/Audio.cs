@@ -36,5 +36,20 @@ namespace AIS_musicCD
 			checkBox1.DataBindings.Add("Checked", dataGridView1.DataSource, dt.Columns[6].ToString());
 			dataGridView1.AutoResizeColumns();
 		}
-	}
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tx = (TextBox)sender;
+            try
+            {
+                DataTable fdt = SQL.query(DBC, "SELECT audio.[code] AS Код, audio.[name_audio] AS Название, audio.[years] AS Год, "
+                    + "audio.[tracks] AS [Кол-во треков], audio.[time] AS [Время звучания], audio.[img], audio.[solo] AS [Сольный] FROM audio where lcase(audio.[name_audio]) like lcase('%" + tx.Text + " %') ; ");
+                dataGridView1.DataSource = fdt;
+            }
+            catch (Exception sa)
+            { };
+
+
+        }
+    }
 }
