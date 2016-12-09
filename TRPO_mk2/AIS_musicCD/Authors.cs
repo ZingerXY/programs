@@ -25,7 +25,7 @@ namespace AIS_musicCD
 		{
             //1 знак - автор + 99 стилей + 99 стран + 999 групп
             DataTable dt2 = SQL.query(DBC,
-"SELECT (authors.code + 20000024 + style.code * 1000000 + country.code * 10000) as Код, authors.group_name AS Группа, style.style_name AS Стиль, country.country_name AS Страна FROM style INNER JOIN(country INNER JOIN authors ON country.[code] = authors.[country]) ON style.[code] = authors.[style];");
+"SELECT (authors.code + 20000024 + style.code * 100000 + country.code * 1000) as Код, authors.group_name AS Группа, style.style_name AS Стиль, country.country_name AS Страна FROM style INNER JOIN(country INNER JOIN authors ON country.[code] = authors.[country]) ON style.[code] = authors.[style];");
             dataGridView1.DataSource = dt2;
         }
 		private void Add_Click(object sender, EventArgs e)
