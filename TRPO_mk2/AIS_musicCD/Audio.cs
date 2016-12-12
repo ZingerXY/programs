@@ -20,7 +20,7 @@ namespace AIS_musicCD
 			this.DBC = DBC;
 			InitializeComponent();
 		}
-
+		// Загрузка таблицы
 		private void Audio_Load(object sender, EventArgs e)
 		{
 			DataTable dt = SQL.query(DBC, "SELECT audio.[code] AS Код, audio.[name_audio] AS Название, audio.[years] AS Год, "
@@ -36,7 +36,7 @@ namespace AIS_musicCD
 			checkBox1.DataBindings.Add("Checked", dataGridView1.DataSource, dt.Columns[6].ToString());
 			dataGridView1.AutoResizeColumns();
 		}
-
+		// Фильтр
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             TextBox tx = (TextBox)sender;
@@ -44,7 +44,32 @@ namespace AIS_musicCD
                 + "audio.[tracks] AS [Кол-во треков], audio.[time] AS [Время звучания], audio.[img], audio.[solo] AS [Сольный] FROM audio where lcase(audio.[name_audio]) like lcase('%" + tx.Text + " %') ; ");
             dataGridView1.DataSource = fdt;
 
-
         }
-    }
+
+		private void textBox4_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox3_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void checkBox1_CheckedChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void AddRecord_Click(object sender, EventArgs e)
+		{
+			AddAudio addaudio = new AddAudio(DBC);
+			addaudio.Show();
+		}
+	}
 }

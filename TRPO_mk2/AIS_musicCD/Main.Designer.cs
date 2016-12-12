@@ -42,8 +42,9 @@
 			// 
 			// Audio
 			// 
+			this.Audio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Audio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Audio.Location = new System.Drawing.Point(128, 162);
+			this.Audio.Location = new System.Drawing.Point(16, 204);
 			this.Audio.Name = "Audio";
 			this.Audio.Size = new System.Drawing.Size(128, 35);
 			this.Audio.TabIndex = 0;
@@ -53,8 +54,9 @@
 			// 
 			// Authors
 			// 
+			this.Authors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Authors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Authors.Location = new System.Drawing.Point(274, 162);
+			this.Authors.Location = new System.Drawing.Point(16, 290);
 			this.Authors.Name = "Authors";
 			this.Authors.Size = new System.Drawing.Size(128, 35);
 			this.Authors.TabIndex = 1;
@@ -64,8 +66,9 @@
 			// 
 			// Style
 			// 
+			this.Style.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Style.Location = new System.Drawing.Point(128, 250);
+			this.Style.Location = new System.Drawing.Point(168, 290);
 			this.Style.Name = "Style";
 			this.Style.Size = new System.Drawing.Size(128, 35);
 			this.Style.TabIndex = 2;
@@ -75,8 +78,9 @@
 			// 
 			// Country
 			// 
+			this.Country.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Country.Location = new System.Drawing.Point(274, 250);
+			this.Country.Location = new System.Drawing.Point(325, 290);
 			this.Country.Name = "Country";
 			this.Country.Size = new System.Drawing.Size(128, 35);
 			this.Country.TabIndex = 3;
@@ -88,7 +92,7 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(205, 216);
+			this.label1.Location = new System.Drawing.Point(19, 254);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(125, 20);
 			this.label1.TabIndex = 4;
@@ -99,7 +103,7 @@
 			this.label2.AutoSize = true;
 			this.label2.BackColor = System.Drawing.Color.Snow;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label2.Location = new System.Drawing.Point(124, 120);
+			this.label2.Location = new System.Drawing.Point(12, 390);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(44, 20);
 			this.label2.TabIndex = 5;
@@ -107,8 +111,9 @@
 			// 
 			// Report
 			// 
+			this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Report.Location = new System.Drawing.Point(274, 331);
+			this.Report.Location = new System.Drawing.Point(168, 343);
 			this.Report.Name = "Report";
 			this.Report.Size = new System.Drawing.Size(128, 35);
 			this.Report.TabIndex = 6;
@@ -118,8 +123,9 @@
 			// 
 			// AddRecord
 			// 
+			this.AddRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.AddRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.AddRecord.Location = new System.Drawing.Point(128, 331);
+			this.AddRecord.Location = new System.Drawing.Point(16, 343);
 			this.AddRecord.Name = "AddRecord";
 			this.AddRecord.Size = new System.Drawing.Size(128, 35);
 			this.AddRecord.TabIndex = 7;

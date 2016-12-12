@@ -52,6 +52,12 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddAudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAudio.Designer.cs">
+      <DependentUpon>AddAudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Audio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAudio.resx">
+      <DependentUpon>AddAudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Audio.resx">
       <DependentUpon>Audio.cs</DependentUpon>
