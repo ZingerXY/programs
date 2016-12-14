@@ -64,8 +64,8 @@ namespace AIS_musicCD
 			myButt.Location = new Point(110, num * 25 + st);
 			this.Controls.Add(myButt);
 			myButt.Click += MyButt_Click;
-			Height = 39 + (num + 1) * 25 + st;
-			Width = 250;
+			Height = 49 + (num + 1) * 25 + st;
+			Width = 260;
 		}
 
 		private void MyButt_Click(object sender, EventArgs e)
