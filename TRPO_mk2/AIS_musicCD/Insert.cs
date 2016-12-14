@@ -7,6 +7,20 @@ using System.Windows.Forms;
 
 namespace AIS_musicCD
 {
+	// Создание формы на добавление с множеством полей
+	/*List<string[]> ls = new List<string[]>();
+	ls.Add("group_name,Название группы".Split(',')); // TextBox
+	ls.Add("style,Стиль,style".Split(',')); // ComboBox
+	ls.Add("country,Страна,country".Split(','));
+	Insert ins = new Insert("authors", ls);
+	Add add = new Add(DBC, ins);
+	add.Show();*/
+	// Создание формы на добавление с 1 полем
+	/*string[]  str = new string[2];
+	str = "style_name Стиль".Split(' ');
+	Insert ins = new Insert("style", str);
+	Add add = new Add(DBC, ins);
+	add.Show();*/
 	public class Insert
 	{
 		string tablename;

@@ -40,8 +40,8 @@ namespace AIS_musicCD
 			{
 				textBox1.Text = "";
 				dataGridView1.DataSource = SQL.query(DBC, "SELECT * FROM country");
-				MessageBox.Show("Страна "+ textBox1.Text + " успешно добавлена.");				
-            }	*/		
+				MessageBox.Show("Страна "+ textBox1.Text + " успешно добавлена.");
+            }	*/
 		}
 	}
 }

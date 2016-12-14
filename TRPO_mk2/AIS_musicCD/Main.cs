@@ -52,17 +52,6 @@ namespace AIS_musicCD
 			report.Show();
 		}
 
-		private void AddRecord_Click(object sender, EventArgs e)
-		{
-			// Создание формы на добавление с множеством полей
-			// Создание формы на добавление с 1 полем
-			/*string[]  str = new string[2];
-			str = "style_name Стиль".Split(' ');
-			Insert ins = new Insert("style", str);
-			Add add = new Add(DBC, ins);
-			add.Show();*/
-		}
-
         private void Main_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
@@ -76,14 +65,12 @@ namespace AIS_musicCD
 			tt.SetToolTip(Style, "Просмотр и добавление стилей");
 			tt.SetToolTip(Country, "Просмотр и добавление стран");
 			//label2.BackColor = Color.FromArgb(120, 150, 150, 150);
-
 		}
 
         private void tikaet(object sender, EventArgs e)
         {
          //   throw new NotImplementedException();
             label2.Text = "Сегодня: " + DateTime.Now.ToString();
-
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
