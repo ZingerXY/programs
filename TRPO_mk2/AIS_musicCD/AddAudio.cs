@@ -33,21 +33,58 @@ namespace AIS_musicCD
 		}
 
         //Добавляем авторов в комбобокс и в листбокс
-        private void authors_combobox()
+        public void authors_combobox()
         {
-            dt = SQL.query(DBC, "Select authors.group_name from authors");
+            comboBox1.Items.Clear();
+            listBox1.Items.Clear();
+            dt = SQL.query(DBC, "Select authors.group_name, code from authors");
             for (int j = 0; j < dt.Rows.Count; j++)
             {
                 string str = dt.Rows[j][0].ToString();
                 comboBox1.Items.Add(str);
-                listBox1.Items.Add(str);
             }
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void AddAuthor_Click(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndex = listBox1.SelectedIndex;
+            if (checkBox1.Checked && listBox1.Items.Count > 0)
+            {
+                MessageBox.Show("В сольный альбом нельзя добавить больше одного исполнителя");
+                return;
+
+            }
+
+            if (comboBox1.SelectedIndex == -1)
+                return;
+            listBox1.Items.Add(comboBox1.SelectedItem.ToString());
+            comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                authors_combobox();
+            }
+
+        }
+
+        private void NewAuthor_Click(object sender, EventArgs e)
+        {
+            List<string[]> ls = new List<string[]>();
+            ls.Add("group_name,Название группы".Split(','));
+            ls.Add("style,Стиль,style".Split(','));
+            ls.Add("country,Страна,country".Split(','));
+            Insert ins = new Insert("authors", ls);
+            Add add = new Add(DBC, ins, authors_combobox);
+            add.Show();
+
+        }
+
+        private void AddAudio_Activated(object sender, EventArgs e)
+        {
+            Text = "Окно активно!";
         }
     }
 }

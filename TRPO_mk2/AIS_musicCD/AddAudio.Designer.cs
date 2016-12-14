@@ -77,6 +77,7 @@
             this.checkBox1.TabIndex = 62;
             this.checkBox1.Text = "Сольный";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label4
             // 
@@ -158,7 +159,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 82);
             this.listBox1.TabIndex = 66;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -185,6 +185,7 @@
             this.AddAuthor.TabIndex = 69;
             this.AddAuthor.Text = "Добавить автора";
             this.AddAuthor.UseVisualStyleBackColor = true;
+            this.AddAuthor.Click += new System.EventHandler(this.AddAuthor_Click);
             // 
             // NewAuthor
             // 
@@ -194,6 +195,7 @@
             this.NewAuthor.TabIndex = 70;
             this.NewAuthor.Text = "Новый автор";
             this.NewAuthor.UseVisualStyleBackColor = true;
+            this.NewAuthor.Click += new System.EventHandler(this.NewAuthor_Click);
             // 
             // AddAudio
             // 
@@ -221,6 +223,7 @@
             this.Name = "AddAudio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddAudio";
+            this.Activated += new System.EventHandler(this.AddAudio_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

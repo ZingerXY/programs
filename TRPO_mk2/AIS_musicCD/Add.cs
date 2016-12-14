@@ -15,15 +15,23 @@ namespace AIS_musicCD
 	{
 		OleDbConnection DBC;
 		Insert apr;
+        Action foo;
 
-		public Add(OleDbConnection DBC, Insert pr)
+		public Add(OleDbConnection DBC, Insert pr, Action foo)
 		{
 			this.DBC = DBC;
 			apr = pr;
+            this.foo = foo;
 			InitializeComponent();
 		}
+        public Add(OleDbConnection DBC, Insert pr)
+        {
+            this.DBC = DBC;
+            apr = pr;
+            InitializeComponent();
+        }
 
-		private void Add_Load(object sender, EventArgs e)
+        private void Add_Load(object sender, EventArgs e)
 		{
 			var num = apr.pr.Count; // количество элементов
 			var st = 10; // начальная позиция по вертикали
@@ -39,8 +47,9 @@ namespace AIS_musicCD
 				if(apr.pr[i].Length > 2)
 				{
 					ComboBox myCbox = new ComboBox();
-					myCbox.Location = new Point(110, i * 25 + st);
-					DataTable dt = SQL.query(DBC, "SELECT * FROM " + apr.pr[i][2]);
+                    myCbox.DropDownStyle = ComboBoxStyle.DropDownList;
+                    myCbox.Location = new Point(110, i * 25 + st);
+					DataTable dt = SQL.query(DBC, "SELECT * FROM " + apr.pr[i][2]);              
 					for (int j = 0; j < dt.Rows.Count; j++)
 					{
 						//int n = int.Parse(dt.Rows[j][0].ToString());
@@ -48,6 +57,7 @@ namespace AIS_musicCD
 					}					
 					apr.SetTextBox(i, myCbox);
 					this.Controls.Add(myCbox);
+                    
 				}
 				else
 				{
@@ -80,6 +90,7 @@ namespace AIS_musicCD
 			return;*/
 			if (SQL.query(DBC, apr.GetInsert(), "add") > 0)
 				MessageBox.Show("Запись успешно добавлена.");
+            foo();
 			Close();
 			//throw new NotImplementedException();
 		}
