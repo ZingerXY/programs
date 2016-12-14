@@ -23,10 +23,12 @@ namespace AIS_musicCD
 
 		private void Country_Load(object sender, EventArgs e)
 		{
-			dataGridView1.DataSource = SQL.query(DBC, "SELECT * FROM country");
-			dataGridView1.Columns[0].HeaderText = "Код";
-			dataGridView1.Columns[1].HeaderText = "Страна";
-			dataGridView1.AutoResizeColumns();
+			update_dataGridView();
+        }
+
+		private void update_dataGridView()
+		{
+			dataGridView1.DataSource = SQL.query(DBC, "SELECT country.[code] AS [Код], country.[country_name] AS [Страна] FROM country; ");
 		}
 
 		private void AddNew_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace AIS_musicCD
 			string[] str = new string[2];
 			str = "country_name Страна".Split(' ');
 			Insert ins = new Insert("country", str);
-			Add add = new Add(DBC, ins);
+			Add add = new Add(DBC, ins, update_dataGridView);
 			add.Show();
 			/*if (SQL.query(DBC, "INSERT INTO country(country_name) VALUES('" + textBox1.Text + "')", "add") > 0)
 			{
