@@ -44,7 +44,7 @@
             // 
             this.Audio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Audio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Audio.Location = new System.Drawing.Point(16, 204);
+            this.Audio.Location = new System.Drawing.Point(16, 153);
             this.Audio.Name = "Audio";
             this.Audio.Size = new System.Drawing.Size(136, 35);
             this.Audio.TabIndex = 0;
@@ -141,7 +141,7 @@
             // 
             this.Move.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Move.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Move.Location = new System.Drawing.Point(167, 204);
+            this.Move.Location = new System.Drawing.Point(16, 207);
             this.Move.Name = "Move";
             this.Move.Size = new System.Drawing.Size(136, 35);
             this.Move.TabIndex = 9;
