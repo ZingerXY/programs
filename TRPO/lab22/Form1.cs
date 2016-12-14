@@ -179,7 +179,7 @@ namespace lab22
             if ((int)tx.Tag == 1)
             Fresh("Select * from audio where lcase(" + str + ") like lcase('%" + tx.Text + "%')");     
             else
-              Fresh("Select * from audio where " + str + " = " + tx.Text);
+              Fresh("SELECT (authors.code + 20000024 + style.code * 100000 + country.code * 1000) as Код, authors.group_name AS Группа, style.style_name AS Стиль, country.country_name AS Страна FROM style INNER JOIN(country INNER JOIN authors ON country.[code] = authors.[country]) ON style.[code] = authors.[style] where " + str + " = " + tx.Text);
             Text = tx.Text;
         }
 
