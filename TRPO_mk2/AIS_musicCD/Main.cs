@@ -70,9 +70,14 @@ namespace AIS_musicCD
             timer.Interval = 1000;
             timer.Tick += tikaet;
             label2.Text = "Сегодня: " + DateTime.Now.ToString();
-            label2.BackColor = Color.FromArgb(120, 150, 150, 150);
+			ToolTip tt = new ToolTip();
+			tt.SetToolTip(Audio, "Просмотр и добавление дисков");
+			tt.SetToolTip(Authors, "Просмотр и добавление авторов");
+			tt.SetToolTip(Style, "Просмотр и добавление стилей");
+			tt.SetToolTip(Country, "Просмотр и добавление стран");
+			//label2.BackColor = Color.FromArgb(120, 150, 150, 150);
 
-        }
+		}
 
         private void tikaet(object sender, EventArgs e)
         {

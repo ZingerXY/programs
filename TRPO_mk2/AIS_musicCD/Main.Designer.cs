@@ -36,7 +36,6 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.Report = new System.Windows.Forms.Button();
-			this.AddRecord = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
@@ -68,7 +67,7 @@
 			// 
 			this.Style.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Style.Location = new System.Drawing.Point(168, 290);
+			this.Style.Location = new System.Drawing.Point(16, 346);
 			this.Style.Name = "Style";
 			this.Style.Size = new System.Drawing.Size(128, 35);
 			this.Style.TabIndex = 2;
@@ -80,7 +79,7 @@
 			// 
 			this.Country.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Country.Location = new System.Drawing.Point(325, 290);
+			this.Country.Location = new System.Drawing.Point(167, 346);
 			this.Country.Name = "Country";
 			this.Country.Size = new System.Drawing.Size(128, 35);
 			this.Country.TabIndex = 3;
@@ -91,6 +90,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
+			this.label1.BackColor = System.Drawing.Color.Transparent;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label1.Location = new System.Drawing.Point(19, 254);
 			this.label1.Name = "label1";
@@ -101,7 +101,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.BackColor = System.Drawing.Color.Snow;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.label2.Location = new System.Drawing.Point(12, 390);
 			this.label2.Name = "label2";
@@ -113,25 +113,13 @@
 			// 
 			this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Report.Location = new System.Drawing.Point(168, 343);
+			this.Report.Location = new System.Drawing.Point(317, 346);
 			this.Report.Name = "Report";
 			this.Report.Size = new System.Drawing.Size(128, 35);
 			this.Report.TabIndex = 6;
 			this.Report.Text = "Отчет";
 			this.Report.UseVisualStyleBackColor = true;
 			this.Report.Click += new System.EventHandler(this.Report_Click);
-			// 
-			// AddRecord
-			// 
-			this.AddRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.AddRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.AddRecord.Location = new System.Drawing.Point(16, 343);
-			this.AddRecord.Name = "AddRecord";
-			this.AddRecord.Size = new System.Drawing.Size(128, 35);
-			this.AddRecord.TabIndex = 7;
-			this.AddRecord.Text = "Добавить";
-			this.AddRecord.UseVisualStyleBackColor = true;
-			this.AddRecord.Click += new System.EventHandler(this.AddRecord_Click);
 			// 
 			// button1
 			// 
@@ -155,7 +143,6 @@
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(494, 419);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.AddRecord);
 			this.Controls.Add(this.Report);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -187,7 +174,6 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button Report;
-		private System.Windows.Forms.Button AddRecord;
 		private System.Windows.Forms.Button button1;
 	}
 }
