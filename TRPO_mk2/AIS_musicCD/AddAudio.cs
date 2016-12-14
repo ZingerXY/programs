@@ -32,8 +32,8 @@ namespace AIS_musicCD
 				pictureBox1.Image = Image.FromFile(ofd.FileName);
 		}
 
-        //Добавляем авторов в комбобокс и в листбокс
-        public void authors_combobox()
+		//Добавляем авторов в комбобокс и в листбокс
+		private void authors_combobox()
         {
             comboBox1.Items.Clear();
             listBox1.Items.Clear();

@@ -23,10 +23,12 @@ namespace AIS_musicCD
 
 		private void Style_Load(object sender, EventArgs e)
 		{
-			dataGridView1.DataSource = SQL.query(DBC, "SELECT * FROM style");
-			dataGridView1.Columns[0].HeaderText = "Код";
-			dataGridView1.Columns[1].HeaderText = "Стиль";
-			dataGridView1.AutoResizeColumns();
+			update_dataGridView();
+        }
+
+		private void update_dataGridView()
+		{
+			dataGridView1.DataSource = SQL.query(DBC, "SELECT style.[code] AS [Код], style.[style_name] AS [Стиль] FROM style; ");
 		}
 
 		private void AddNew_Click(object sender, EventArgs e)
@@ -34,7 +36,7 @@ namespace AIS_musicCD
 			string[]  str = new string[2];
 			str = "style_name Стиль".Split(' ');
 			Insert ins = new Insert("style", str);
-			Add add = new Add(DBC, ins);
+			Add add = new Add(DBC, ins, update_dataGridView);
 			add.Show();
 			/*if (SQL.query(DBC, "INSERT INTO style(style_name) VALUES('" + textBox1.Text + "')", "add") > 0)
 			{
