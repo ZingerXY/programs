@@ -28,21 +28,24 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.SuspendLayout();
-            // 
-            // Add
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "Add";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add";
-            this.Load += new System.EventHandler(this.Add_Load);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Add_MouseMove);
-            this.ResumeLayout(false);
+			this.SuspendLayout();
+			// 
+			// Add
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(426, 403);
+			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
+			this.Name = "Add";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Add";
+			this.Load += new System.EventHandler(this.Add_Load);
+			this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Add_MouseMove);
+			this.ResumeLayout(false);
 
 		}
 
