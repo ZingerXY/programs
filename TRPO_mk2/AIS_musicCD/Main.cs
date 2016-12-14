@@ -51,7 +51,11 @@ namespace AIS_musicCD
 			Report report = new Report(DBC);
 			report.Show();
 		}
-
+        private void Move_Click(object sender, EventArgs e)
+        {
+            Move move = new AIS_musicCD.Move(DBC);
+            move.Show();
+        }
         private void Main_Load(object sender, EventArgs e)
         {
             Timer timer = new Timer();
@@ -115,5 +119,7 @@ namespace AIS_musicCD
 		{
 			Close();
 		}
-	}
+
+
+    }
 }
