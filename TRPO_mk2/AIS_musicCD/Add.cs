@@ -70,6 +70,12 @@ namespace AIS_musicCD
 
 		private void MyButt_Click(object sender, EventArgs e)
 		{
+			if(!apr.CheckControls())
+			{
+				MessageBox.Show("Не все поля заполненны.");
+				return;
+			}
+				
 			/*MessageBox.Show(apr.GetInsert());
 			return;*/
 			if (SQL.query(DBC, apr.GetInsert(), "add") > 0)
@@ -80,7 +86,7 @@ namespace AIS_musicCD
 
 		private void Add_MouseMove(object sender, MouseEventArgs e)
 		{
-			Text = e.X + ":" + e.Y;
+			//Text = e.X + ":" + e.Y;
 		}
 	}
 }

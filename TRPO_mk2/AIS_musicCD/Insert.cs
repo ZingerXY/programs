@@ -31,6 +31,13 @@ namespace AIS_musicCD
 			this.tb.Insert(num,tb);
 		}
 
+		public bool CheckControls()
+		{
+			for (int i = 0; i < tb.Count; i++)
+				if (tb[i].Text == "") return false;
+			return true;
+		}
+
 		public string GetInsert()
 		{
 			string str = "INSERT INTO " + tablename + "(";

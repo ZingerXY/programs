@@ -30,7 +30,13 @@ namespace AIS_musicCD
         }
 		private void Add_Click(object sender, EventArgs e)
 		{
-			
+			List<string[]> ls = new List<string[]>();
+			ls.Add("group_name,Название группы".Split(','));
+			ls.Add("style,Стиль,style".Split(','));
+			ls.Add("country,Страна,country".Split(','));
+			Insert ins = new Insert("authors", ls);
+			Add add = new Add(DBC, ins);
+			add.Show();
 		}
 	}
 }
