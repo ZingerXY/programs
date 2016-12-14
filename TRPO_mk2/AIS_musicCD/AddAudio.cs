@@ -33,7 +33,7 @@ namespace AIS_musicCD
 		}
 
         //Добавляем авторов в комбобокс и в листбокс
-        public void authors_combobox()
+        private void authors_combobox()
         {
             comboBox1.Items.Clear();
             listBox1.Items.Clear();
