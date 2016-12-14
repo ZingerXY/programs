@@ -42,18 +42,20 @@
             // 
             // Audio
             // 
+            this.Audio.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Audio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Audio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Audio.Location = new System.Drawing.Point(16, 153);
+            this.Audio.Location = new System.Drawing.Point(16, 155);
             this.Audio.Name = "Audio";
             this.Audio.Size = new System.Drawing.Size(136, 35);
             this.Audio.TabIndex = 0;
             this.Audio.Text = "CD - диски";
-            this.Audio.UseVisualStyleBackColor = true;
+            this.Audio.UseVisualStyleBackColor = false;
             this.Audio.Click += new System.EventHandler(this.Audio_Click);
             // 
             // Authors
             // 
+            this.Authors.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Authors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Authors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Authors.Location = new System.Drawing.Point(16, 290);
@@ -61,11 +63,12 @@
             this.Authors.Size = new System.Drawing.Size(136, 35);
             this.Authors.TabIndex = 1;
             this.Authors.Text = "Исполнители";
-            this.Authors.UseVisualStyleBackColor = true;
+            this.Authors.UseVisualStyleBackColor = false;
             this.Authors.Click += new System.EventHandler(this.Authors_Click);
             // 
             // Style
             // 
+            this.Style.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Style.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Style.Location = new System.Drawing.Point(16, 346);
@@ -73,11 +76,12 @@
             this.Style.Size = new System.Drawing.Size(136, 35);
             this.Style.TabIndex = 2;
             this.Style.Text = "Стили";
-            this.Style.UseVisualStyleBackColor = true;
+            this.Style.UseVisualStyleBackColor = false;
             this.Style.Click += new System.EventHandler(this.Style_Click);
             // 
             // Country
             // 
+            this.Country.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Country.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Country.Location = new System.Drawing.Point(167, 346);
@@ -85,7 +89,7 @@
             this.Country.Size = new System.Drawing.Size(136, 35);
             this.Country.TabIndex = 3;
             this.Country.Text = "Страны";
-            this.Country.UseVisualStyleBackColor = true;
+            this.Country.UseVisualStyleBackColor = false;
             this.Country.Click += new System.EventHandler(this.Country_Click);
             // 
             // label1
@@ -112,6 +116,7 @@
             // 
             // Report
             // 
+            this.Report.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Report.Location = new System.Drawing.Point(317, 346);
@@ -119,7 +124,7 @@
             this.Report.Size = new System.Drawing.Size(136, 35);
             this.Report.TabIndex = 6;
             this.Report.Text = "Отчет";
-            this.Report.UseVisualStyleBackColor = true;
+            this.Report.UseVisualStyleBackColor = false;
             this.Report.Click += new System.EventHandler(this.Report_Click);
             // 
             // button1
@@ -139,14 +144,15 @@
             // 
             // Move
             // 
+            this.Move.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Move.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Move.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move.Location = new System.Drawing.Point(16, 207);
             this.Move.Name = "Move";
             this.Move.Size = new System.Drawing.Size(136, 35);
             this.Move.TabIndex = 9;
-            this.Move.Text = "Приход/расход";
-            this.Move.UseVisualStyleBackColor = true;
+            this.Move.Text = "Приход/Расход";
+            this.Move.UseVisualStyleBackColor = false;
             this.Move.Click += new System.EventHandler(this.Move_Click);
             // 
             // Main
