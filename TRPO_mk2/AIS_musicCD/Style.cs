@@ -31,12 +31,17 @@ namespace AIS_musicCD
 
 		private void AddNew_Click(object sender, EventArgs e)
 		{
-			if (SQL.query(DBC, "INSERT INTO style(style_name) VALUES('" + textBox1.Text + "')", "add") > 0)
+			string[]  str = new string[2];
+			str = "style_name Стиль".Split(' ');
+			Insert ins = new Insert("style", str);
+			Add add = new Add(DBC, ins);
+			add.Show();
+			/*if (SQL.query(DBC, "INSERT INTO style(style_name) VALUES('" + textBox1.Text + "')", "add") > 0)
 			{
 				dataGridView1.DataSource = SQL.query(DBC, "SELECT * FROM style");
 				textBox1.Text = "";
 				MessageBox.Show("Стиль " + textBox1.Text + " успешно добавлен.");				
-			}
+			}*/
 		}
 	}
 }

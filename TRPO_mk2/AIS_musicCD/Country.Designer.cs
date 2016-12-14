@@ -50,8 +50,9 @@
 			// 
 			// AddNew
 			// 
+			this.AddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.AddNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.AddNew.Location = new System.Drawing.Point(198, 66);
+			this.AddNew.Location = new System.Drawing.Point(45, 217);
 			this.AddNew.Name = "AddNew";
 			this.AddNew.Size = new System.Drawing.Size(114, 33);
 			this.AddNew.TabIndex = 37;
@@ -66,6 +67,7 @@
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(114, 26);
 			this.textBox1.TabIndex = 38;
+			this.textBox1.Visible = false;
 			// 
 			// label1
 			// 
@@ -76,12 +78,13 @@
 			this.label1.Size = new System.Drawing.Size(118, 20);
 			this.label1.TabIndex = 39;
 			this.label1.Text = "Новая страна:";
+			this.label1.Visible = false;
 			// 
 			// Country
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(329, 216);
+			this.ClientSize = new System.Drawing.Size(204, 262);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.AddNew);
