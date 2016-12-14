@@ -38,6 +38,7 @@
             this.Report = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Move = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Audio
@@ -155,12 +156,27 @@
             this.Move.UseVisualStyleBackColor = false;
             this.Move.Click += new System.EventHandler(this.Move_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(447, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(22, 22);
+            this.button2.TabIndex = 10;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(494, 419);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.Move);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Report);
@@ -196,6 +212,7 @@
 		private System.Windows.Forms.Button Report;
 		private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Move;
+        private System.Windows.Forms.Button button2;
     }
 }
 
