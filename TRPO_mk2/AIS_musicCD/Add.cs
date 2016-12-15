@@ -24,12 +24,6 @@ namespace AIS_musicCD
             this.foo = foo;
 			InitializeComponent();
 		}
-        public Add(OleDbConnection DBC, Insert pr)
-        {
-            this.DBC = DBC;
-            apr = pr;
-            InitializeComponent();
-        }
 
         private void Add_Load(object sender, EventArgs e)
 		{
@@ -102,7 +96,7 @@ namespace AIS_musicCD
 
 		private void Add_MouseMove(object sender, MouseEventArgs e)
 		{
-			Text = e.X + ":" + e.Y;
+			//Text = e.X + ":" + e.Y;
 		}
 	}
 }

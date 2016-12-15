@@ -178,6 +178,7 @@
 			this.Add.TabIndex = 65;
 			this.Add.Text = "Добавить запись";
 			this.Add.UseVisualStyleBackColor = false;
+			this.Add.Click += new System.EventHandler(this.Add_Click);
 			// 
 			// listBox1
 			// 
@@ -269,7 +270,6 @@
 			this.Name = "AddAudio";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "AddAudio";
-			this.Activated += new System.EventHandler(this.AddAudio_Activated);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

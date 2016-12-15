@@ -82,9 +82,9 @@ namespace AIS_musicCD
 
         }
 
-        private void AddAudio_Activated(object sender, EventArgs e)
-        {
-            Text = "Окно активно!";
-        }
-    }
+		private void Add_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
