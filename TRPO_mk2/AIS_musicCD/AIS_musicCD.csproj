@@ -115,6 +115,12 @@
       <DependentUpon>Up.cs</DependentUpon>
     </Compile>
     <Compile Include="Update.cs" />
+    <Compile Include="UpdateAudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAudio.Designer.cs">
+      <DependentUpon>UpdateAudio.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Up.resx">
       <DependentUpon>Up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAudio.resx">
+      <DependentUpon>UpdateAudio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
