@@ -15,13 +15,13 @@ namespace AIS_musicCD
 	{
 		OleDbConnection DBC;
 		Insert apr;
-        Action foo;
+        Action update;
 
-		public Add(OleDbConnection DBC, Insert pr, Action foo)
+		public Add(OleDbConnection DBC, Insert pr, Action update)
 		{
 			this.DBC = DBC;
 			apr = pr;
-            this.foo = foo;
+            this.update = update;
 			InitializeComponent();
 		}
 
@@ -29,6 +29,7 @@ namespace AIS_musicCD
 		{
 			var num = apr.pr.Count; // количество элементов
 			var st = 10; // начальная позиция по вертикали
+			var dict = 0;
 
 			for(int i = 0; i < num; i++)
 			{
@@ -43,12 +44,17 @@ namespace AIS_musicCD
 					myCbox.Size = new Size(140, 28);
 					myCbox.DropDownStyle = ComboBoxStyle.DropDownList;
                     myCbox.Location = new Point(110, i * 35 + st);
-					DataTable dt = SQL.query(DBC, "SELECT * FROM " + apr.pr[i][2]);              
-					for (int j = 0; j < dt.Rows.Count; j++)
-                        myCbox.Items.Add(dt.Rows[j][1].ToString());					
+					DataTable dt = SQL.query(DBC, "SELECT * FROM " + apr.pr[i][2]);
+					apr.record.Add(new Dictionary<int, string>());
+                    for (int j = 0; j < dt.Rows.Count; j++)
+					{
+						string code = dt.Rows[j][0].ToString();
+						string name = dt.Rows[j][1].ToString();
+						apr.record[dict].Add(myCbox.Items.Add(name), code);					
+					}
+					dict++;
 					apr.SetTextBox(i, myCbox);
-					this.Controls.Add(myCbox);
-                    
+					this.Controls.Add(myCbox);                
 				}
 				else
 				{
@@ -83,7 +89,7 @@ namespace AIS_musicCD
 				
 			if (SQL.query(DBC, apr.GetInsert(), "add") > 0)
 			{
-				foo();
+				update();
 				MessageBox.Show("Запись успешно добавлена.");
 			}         
 			Close();

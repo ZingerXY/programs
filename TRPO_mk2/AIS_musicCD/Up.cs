@@ -29,6 +29,7 @@ namespace AIS_musicCD
 		{
 			var num = apr.pr.Count; // количество элементов
 			var st = 10; // начальная позиция по вертикали
+			var dict = 0;
 
 			for (int i = 0; i < num; i++)
 			{
@@ -44,11 +45,17 @@ namespace AIS_musicCD
 					myCbox.DropDownStyle = ComboBoxStyle.DropDownList;
 					myCbox.Location = new Point(110, i * 35 + st);
 					DataTable dt = SQL.query(DBC, "SELECT * FROM " + apr.pr[i][2]);
+					apr.record.Add(new Dictionary<int, string>());
 					for (int j = 0; j < dt.Rows.Count; j++)
 					{
-						myCbox.Items.Add(dt.Rows[j][1].ToString());
-					}
-					myCbox.SelectedIndex = int.Parse(apr.pr[i][3]) - 1; // << тонкое место
+						string code = dt.Rows[j][0].ToString();
+						string name = dt.Rows[j][1].ToString();
+						int index = myCbox.Items.Add(name);
+                        apr.record[dict].Add(index, code);
+						if (code == apr.pr[i][3])
+							myCbox.SelectedIndex = index;
+                    }
+					dict++;
                     apr.SetTextBox(i, myCbox);
 					this.Controls.Add(myCbox);
 				}

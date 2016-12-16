@@ -57,8 +57,13 @@ namespace AIS_musicCD
 
 		private void Delete_Click(object sender, EventArgs e)
 		{
-			return; // не рекомендуется удалять записи пока не поправлены тонкие места
-			if (MessageBox.Show("Вы действительно хотите удалить запись?.", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
+			DataTable dt = SQL.query(DBC, "SELECT * FROM authors WHERE country = " + dataGridView1.CurrentRow.Cells[0].Value.ToString());
+			if(dt.Rows.Count > 0)
+			{
+				MessageBox.Show("Эта страна испольуется в таблице Авторы.", "Нарушение целостности");
+				return;
+			}
+            if (MessageBox.Show("Вы действительно хотите удалить запись?.", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
 				if (SQL.query(DBC, "DELETE * FROM country WHERE code = " + dataGridView1.CurrentRow.Cells[0].Value.ToString(), "add") > 0)
 				{
 					update_dataGridView();

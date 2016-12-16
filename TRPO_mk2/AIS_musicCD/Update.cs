@@ -12,6 +12,7 @@ namespace AIS_musicCD
 		string tablename;
 		public List<string[]> pr = new List<string[]>();
 		List<Control> tb = new List<Control>();
+		public List<Dictionary<int, string>> record = new List<Dictionary<int, string>>();
 		string code;
 		// Конструктор для получения одного элемента
 		public Update(string tablename, string code, string[] pr)
@@ -42,6 +43,7 @@ namespace AIS_musicCD
 		// Получить строку запроса для обновления данных
 		public string GetUpdate()
 		{
+			var dir = 0;
 			string str = "UPDATE " + tablename + " SET ";
 			for (int i = 0; i < pr.Count; i++)
 			{
@@ -49,7 +51,10 @@ namespace AIS_musicCD
 				if (tb[i] is TextBox)
 					val = tb[i].Text;
 				else if (tb[i] is ComboBox)
-					val = (((ComboBox)tb[i]).SelectedIndex + 1).ToString(); // << тонкое место
+				{
+					val = record[dir][((ComboBox)tb[i]).SelectedIndex];
+					dir++;
+				}
 				str += pr[i][0] + " = '" + val + "'" + (i < (pr.Count - 1) ? "," : "");
 			}
 			str += "WHERE code = " + code;

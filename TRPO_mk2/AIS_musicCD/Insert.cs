@@ -27,6 +27,8 @@ namespace AIS_musicCD
 		string tablename;
 		public List<string[]> pr = new List<string[]>();
 		List<Control> tb = new List<Control>();
+		public List<Dictionary<int, string>> record = new List<Dictionary<int, string>>();
+
 		// Конструктор для получения одного элемента
 		public Insert(string tablename, string[] pr)
 		{
@@ -54,6 +56,7 @@ namespace AIS_musicCD
 		// Получить строку запроса для добавления данных
 		public string GetInsert()
 		{
+			var dir = 0;
 			string str = "INSERT INTO " + tablename + "(";
             for (int i = 0; i < pr.Count; i++)
 				str += pr[i][0] + (i < (pr.Count - 1) ? "," : "");
@@ -64,7 +67,10 @@ namespace AIS_musicCD
 				if (tb[i] is TextBox)
 					val = tb[i].Text;
 				else if (tb[i] is ComboBox)
-					val = (((ComboBox)tb[i]).SelectedIndex + 1).ToString(); // << тонкое место
+				{
+					val = record[dir][((ComboBox)tb[i]).SelectedIndex];
+					dir++;
+				}						
 				str += "'" + val + "'" + (i < (tb.Count - 1) ? "," : "");
 			}				
 			str += ")";
