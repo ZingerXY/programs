@@ -11,6 +11,8 @@ namespace AIS_musicCD
 {
 	static public class SQL
 	{
+		// Статичный класс для отправки запросов в базу данных
+		// Обычный запрос SELECT для получения таблицы
 		static public DataTable query(OleDbConnection c, string query)
 		{
 			DataTable dt = new DataTable();
@@ -28,7 +30,7 @@ namespace AIS_musicCD
 			c.Close();
 			return dt;
 		}
-
+		// Запрос для получения количественных числовых значений
 		static public void query(OleDbConnection c, string query, out object t)
 		{
 			DataTable dt = new DataTable();
@@ -46,7 +48,7 @@ namespace AIS_musicCD
 			c.Close();
 			t = (object)dt.Rows[0][0];
 		}
-
+		// Запрос INSERT или UPDATE c возмоностью добаления двоичных данных возвращает количество добавленых записей
 		static public int query(OleDbConnection c, string query, string simg = null, byte[] img = null)
 		{
 			int n = 0;

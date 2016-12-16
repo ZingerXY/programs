@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace AIS_musicCD
 {
+	// Примеры создания формы
 	// Создание формы на добавление с множеством полей
 	/*List<string[]> ls = new List<string[]>();
 	ls.Add("group_name,Название группы".Split(',')); // TextBox
@@ -26,32 +27,31 @@ namespace AIS_musicCD
 		string tablename;
 		public List<string[]> pr = new List<string[]>();
 		List<Control> tb = new List<Control>();
-		
-
+		// Конструктор для получения одного элемента
 		public Insert(string tablename, string[] pr)
 		{
 			this.tablename = tablename;
 			this.pr.Add(pr);
 		}
-
+		// Конструктор для получения масива элементов
 		public Insert(string tablename, List<string[]> pr)
 		{
 			this.tablename = tablename;
 			this.pr = pr;
 		}
-
+		// Добаление используемых элементов в формы в масив
 		public void SetTextBox(int num, Control tb)
 		{
 			this.tb.Insert(num,tb);
 		}
-
+		// Проверка на заполнение элементов формы
 		public bool CheckControls()
 		{
 			for (int i = 0; i < tb.Count; i++)
 				if (tb[i].Text == "") return false;
 			return true;
 		}
-
+		// Получить строку запроса для добавления данных
 		public string GetInsert()
 		{
 			string str = "INSERT INTO " + tablename + "(";
@@ -64,7 +64,7 @@ namespace AIS_musicCD
 				if (tb[i] is TextBox)
 					val = tb[i].Text;
 				else if (tb[i] is ComboBox)
-					val = (((ComboBox)tb[i]).SelectedIndex + 1).ToString();
+					val = (((ComboBox)tb[i]).SelectedIndex + 1).ToString(); // << тонкое место
 				str += "'" + val + "'" + (i < (tb.Count - 1) ? "," : "");
 			}				
 			str += ")";
