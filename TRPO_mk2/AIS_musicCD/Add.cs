@@ -81,18 +81,12 @@ namespace AIS_musicCD
 				return;
 			}
 				
-			/*MessageBox.Show(apr.GetInsert());
-			return;*/
 			if (SQL.query(DBC, apr.GetInsert(), "add") > 0)
+			{
+				foo();
 				MessageBox.Show("Запись успешно добавлена.");
-            foo();
+			}         
 			Close();
-			//throw new NotImplementedException();
-		}
-
-		private void Add_MouseMove(object sender, MouseEventArgs e)
-		{
-			//Text = e.X + ":" + e.Y;
 		}
 	}
 }

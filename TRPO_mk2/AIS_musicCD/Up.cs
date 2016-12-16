@@ -17,7 +17,6 @@ namespace AIS_musicCD
 		Update apr;
 		Action foo;
 		
-
 		public Up(OleDbConnection DBC, Update apr, Action foo)
 		{
 			this.DBC = DBC;
@@ -85,8 +84,10 @@ namespace AIS_musicCD
 				return;
 			}
 			if (SQL.query(DBC, apr.GetUpdate(), "add") > 0)
+			{
+				foo();
 				MessageBox.Show("Запись успешно обновлена.");
-			foo();
+			}		
 			Close();
 		}
 	}
