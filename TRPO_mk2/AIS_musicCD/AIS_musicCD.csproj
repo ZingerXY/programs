@@ -108,6 +108,13 @@
     <Compile Include="Style.Designer.cs">
       <DependentUpon>Style.cs</DependentUpon>
     </Compile>
+    <Compile Include="Up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Up.Designer.cs">
+      <DependentUpon>Up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update.cs" />
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Style.resx">
       <DependentUpon>Style.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Up.resx">
+      <DependentUpon>Up.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

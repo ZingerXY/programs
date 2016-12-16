@@ -38,6 +38,8 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.Update = new System.Windows.Forms.Button();
+			this.Delete = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -147,11 +149,41 @@
 			this.label1.TabIndex = 47;
 			this.label1.Text = "Фильтр:";
 			// 
+			// Update
+			// 
+			this.Update.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.Update.Location = new System.Drawing.Point(79, 379);
+			this.Update.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.Update.Name = "Update";
+			this.Update.Size = new System.Drawing.Size(182, 35);
+			this.Update.TabIndex = 48;
+			this.Update.Text = "Изменить автора";
+			this.Update.UseVisualStyleBackColor = false;
+			this.Update.Click += new System.EventHandler(this.Update_Click);
+			// 
+			// Delete
+			// 
+			this.Delete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.Delete.Location = new System.Drawing.Point(79, 427);
+			this.Delete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.Delete.Name = "Delete";
+			this.Delete.Size = new System.Drawing.Size(182, 35);
+			this.Delete.TabIndex = 49;
+			this.Delete.Text = "Удалить автора";
+			this.Delete.UseVisualStyleBackColor = false;
+			this.Delete.Click += new System.EventHandler(this.Delete_Click);
+			// 
 			// Authors
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(748, 490);
+			this.Controls.Add(this.Delete);
+			this.Controls.Add(this.Update);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
@@ -188,5 +220,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button Update;
+		private System.Windows.Forms.Button Delete;
 	}
 }

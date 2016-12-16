@@ -45,5 +45,25 @@ namespace AIS_musicCD
 				MessageBox.Show("Страна "+ textBox1.Text + " успешно добавлена.");
             }	*/
 		}
+
+		private void Update_Click(object sender, EventArgs e)
+		{
+            string[] str = new string[3];
+			str = ("country_name Страна "+ dataGridView1.CurrentRow.Cells[1].Value.ToString()).Split(' ');
+			Update ins = new Update("country", dataGridView1.CurrentRow.Cells[0].Value.ToString(), str);
+			Up up = new Up(DBC, ins, update_dataGridView);
+			up.Show();
+		}
+
+		private void Delete_Click(object sender, EventArgs e)
+		{
+			return; // не рекомендуется удалять записи пока не поправлены тонкие места
+			if (MessageBox.Show("Вы действительно хотите удалить запись?.", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
+				if (SQL.query(DBC, "DELETE * FROM country WHERE code = " + dataGridView1.CurrentRow.Cells[0].Value.ToString(), "add") > 0)
+				{
+					update_dataGridView();
+					MessageBox.Show("Запись успешно удалена.");
+				}
+		}
 	}
 }

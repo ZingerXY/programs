@@ -61,9 +61,32 @@ namespace AIS_musicCD
 					") like lcase ('%" + tx.Text + "%')";
                 dt2 = SQL.query(DBC, str);
                 dataGridView1.DataSource = dt2;
-
             }
-
         }
-    }
+
+		private void Update_Click(object sender, EventArgs e)
+		{
+			DataTable dt = SQL.query(DBC, "SELECT * FROM authors");
+			/*Text = dt.Rows[dataGridView1.CurrentRow.Index][2].ToString();
+			return;*/
+			List<string[]> ls = new List<string[]>();
+			ls.Add(("group_name,Название группы,"+ dt.Rows[dataGridView1.CurrentRow.Index][1].ToString()).Split(','));
+			ls.Add(("style,Стиль,style,"+ dt.Rows[dataGridView1.CurrentRow.Index][2].ToString()).Split(','));
+			ls.Add(("country,Страна,country," + dt.Rows[dataGridView1.CurrentRow.Index][3].ToString()).Split(','));
+			Update ins = new Update("authors", dt.Rows[dataGridView1.CurrentRow.Index][0].ToString(), ls);
+			Up up = new Up(DBC, ins, update_dataGridView);
+			up.Show();
+		}
+
+		private void Delete_Click(object sender, EventArgs e)
+		{
+			DataTable dt = SQL.query(DBC, "SELECT * FROM authors");
+			if (MessageBox.Show("Вы действительно хотите удалить запись?.", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
+			if (SQL.query(DBC, "DELETE * FROM authors WHERE code = " + dt.Rows[dataGridView1.CurrentRow.Index][0].ToString(), "add") > 0)
+				{
+					update_dataGridView();
+					MessageBox.Show("Запись успешно удалена.");
+				}		
+        }
+	}
 }

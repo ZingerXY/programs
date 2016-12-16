@@ -35,7 +35,6 @@ namespace AIS_musicCD
 				Label myLabel = new Label();
 				myLabel.Location = new Point( 10, i * 35 + st + 2);
 				myLabel.Text = apr.pr[i][1];
-				//myLabel.BackColor = Color.Red;
 				this.Controls.Add(myLabel);
 
 				if(apr.pr[i].Length > 2)
@@ -46,10 +45,7 @@ namespace AIS_musicCD
                     myCbox.Location = new Point(110, i * 35 + st);
 					DataTable dt = SQL.query(DBC, "SELECT * FROM " + apr.pr[i][2]);              
 					for (int j = 0; j < dt.Rows.Count; j++)
-					{
-						//int n = int.Parse(dt.Rows[j][0].ToString());
-                        myCbox.Items.Add(dt.Rows[j][1].ToString());
-					}					
+                        myCbox.Items.Add(dt.Rows[j][1].ToString());					
 					apr.SetTextBox(i, myCbox);
 					this.Controls.Add(myCbox);
                     
