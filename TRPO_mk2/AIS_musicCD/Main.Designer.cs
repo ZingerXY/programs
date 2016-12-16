@@ -59,7 +59,7 @@
 			this.Authors.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.Authors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Authors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Authors.Location = new System.Drawing.Point(16, 290);
+			this.Authors.Location = new System.Drawing.Point(16, 352);
 			this.Authors.Name = "Authors";
 			this.Authors.Size = new System.Drawing.Size(136, 35);
 			this.Authors.TabIndex = 1;
@@ -72,7 +72,7 @@
 			this.Style.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.Style.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Style.Location = new System.Drawing.Point(16, 346);
+			this.Style.Location = new System.Drawing.Point(168, 352);
 			this.Style.Name = "Style";
 			this.Style.Size = new System.Drawing.Size(136, 35);
 			this.Style.TabIndex = 2;
@@ -85,7 +85,7 @@
 			this.Country.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.Country.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Country.Location = new System.Drawing.Point(167, 346);
+			this.Country.Location = new System.Drawing.Point(319, 352);
 			this.Country.Name = "Country";
 			this.Country.Size = new System.Drawing.Size(136, 35);
 			this.Country.TabIndex = 3;
@@ -97,10 +97,10 @@
 			// 
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.Color.Transparent;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(19, 254);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label1.Location = new System.Drawing.Point(12, 315);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(125, 20);
+			this.label1.Size = new System.Drawing.Size(162, 25);
 			this.label1.TabIndex = 4;
 			this.label1.Text = "Справочники:";
 			// 
@@ -120,7 +120,7 @@
 			this.Report.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Report.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Report.Location = new System.Drawing.Point(317, 346);
+			this.Report.Location = new System.Drawing.Point(16, 267);
 			this.Report.Name = "Report";
 			this.Report.Size = new System.Drawing.Size(136, 35);
 			this.Report.TabIndex = 6;
@@ -147,7 +147,7 @@
 			this.Move.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.Move.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.Move.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Move.Location = new System.Drawing.Point(16, 207);
+			this.Move.Location = new System.Drawing.Point(16, 211);
 			this.Move.Name = "Move";
 			this.Move.Size = new System.Drawing.Size(136, 35);
 			this.Move.TabIndex = 9;

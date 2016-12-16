@@ -53,6 +53,7 @@
 			// 
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AllowUserToResizeRows = false;
 			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(18, 18);
@@ -61,6 +62,7 @@
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.RowHeadersVisible = false;
+			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView1.Size = new System.Drawing.Size(315, 295);
 			this.dataGridView1.TabIndex = 40;
 			// 
@@ -88,7 +90,6 @@
 			this.Delete.TabIndex = 43;
 			this.Delete.Text = "Удалить";
 			this.Delete.UseVisualStyleBackColor = true;
-			this.Delete.Visible = false;
 			this.Delete.Click += new System.EventHandler(this.Delete_Click);
 			// 
 			// Style
