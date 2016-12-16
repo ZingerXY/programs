@@ -81,6 +81,12 @@ namespace AIS_musicCD
 		private void Delete_Click(object sender, EventArgs e)
 		{
 			DataTable dt = SQL.query(DBC, "SELECT * FROM authors");
+			DataTable dtb = SQL.query(DBC, "SELECT * FROM connect WHERE code_author = " + dataGridView1.CurrentRow.Cells[0].Value.ToString());
+			if (dt.Rows.Count > 0)
+			{
+				MessageBox.Show("Этот автор связан с таблицей Аудиозаписи.", "Нарушение целостности");
+				return;
+			}
 			if (MessageBox.Show("Вы действительно хотите удалить запись?.", "Удаление записи", MessageBoxButtons.YesNo) == DialogResult.Yes)
 			if (SQL.query(DBC, "DELETE * FROM authors WHERE code = " + dt.Rows[dataGridView1.CurrentRow.Index][0].ToString(), "add") > 0)
 				{
